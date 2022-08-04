@@ -1,0 +1,362 @@
+
+ATtiny85_GameConsole.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000074  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  00000282  2**0
+                  ALLOC, LOAD, DATA
+  2 .bss          00000002  00800060  00800060  00000282  2**0
+                  ALLOC
+  3 .comment      0000002f  00000000  00000000  00000282  2**0
+                  CONTENTS, READONLY
+  4 .stack.descriptors.hdr 0000000e  00000000  00000000  000002b1  2**0
+                  CONTENTS, READONLY
+  5 .debug_info   00000420  00000000  00000000  000002bf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000003e8  00000000  00000000  000006df  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000000f5  00000000  00000000  00000ac7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000169  00000000  00000000  00000bbc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .text         00000002  00000074  00000074  00000108  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 10 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000d28  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .text.i2c_transfer 00000032  00000076  00000076  0000010a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .text.i2c_init 00000016  000000a8  000000a8  0000013c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .text.i2c_write 00000014  000000be  000000be  00000152  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .text.i2c_start 00000050  000000d2  000000d2  00000166  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.i2c_stop 0000001c  00000122  00000122  000001b6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.__vector_8 00000024  0000013e  0000013e  000001d2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.startup.main 00000076  00000162  00000162  000001f6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .bss.adcVal   00000001  00800062  00800062  00000282  2**0
+                  ALLOC
+ 19 .bss.counter  00000001  00800063  00800063  00000282  2**0
+                  ALLOC
+ 20 .text.__dummy_fini 00000002  000001d8  000001d8  0000026c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.__dummy_funcs_on_exit 00000002  000001da  000001da  0000026e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.__dummy_simulator_exit 00000002  000001dc  000001dc  00000270  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.exit    0000000e  000001de  000001de  00000272  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text._Exit   00000002  000001ec  000001ec  00000280  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	11 c0       	rjmp	.+34     	; 0x24 <__ctors_end>
+   2:	38 c0       	rjmp	.+112    	; 0x74 <_etext>
+   4:	37 c0       	rjmp	.+110    	; 0x74 <_etext>
+   6:	36 c0       	rjmp	.+108    	; 0x74 <_etext>
+   8:	35 c0       	rjmp	.+106    	; 0x74 <_etext>
+   a:	34 c0       	rjmp	.+104    	; 0x74 <_etext>
+   c:	33 c0       	rjmp	.+102    	; 0x74 <_etext>
+   e:	32 c0       	rjmp	.+100    	; 0x74 <_etext>
+  10:	96 c0       	rjmp	.+300    	; 0x13e <__vector_8>
+  12:	30 c0       	rjmp	.+96     	; 0x74 <_etext>
+  14:	2f c0       	rjmp	.+94     	; 0x74 <_etext>
+  16:	2e c0       	rjmp	.+92     	; 0x74 <_etext>
+  18:	2d c0       	rjmp	.+90     	; 0x74 <_etext>
+  1a:	2c c0       	rjmp	.+88     	; 0x74 <_etext>
+  1c:	2b c0       	rjmp	.+86     	; 0x74 <_etext>
+
+0000001e <.dinit>:
+  1e:	00 60       	ori	r16, 0x00	; 0
+  20:	00 64       	ori	r16, 0x40	; 64
+  22:	80 00       	.word	0x0080	; ????
+
+00000024 <__ctors_end>:
+  24:	11 24       	eor	r1, r1
+  26:	1f be       	out	0x3f, r1	; 63
+  28:	cf e5       	ldi	r28, 0x5F	; 95
+  2a:	d2 e0       	ldi	r29, 0x02	; 2
+  2c:	de bf       	out	0x3e, r29	; 62
+  2e:	cd bf       	out	0x3d, r28	; 61
+
+00000030 <__do_copy_data>:
+  30:	ee e1       	ldi	r30, 0x1E	; 30
+  32:	f0 e0       	ldi	r31, 0x00	; 0
+  34:	40 e0       	ldi	r20, 0x00	; 0
+  36:	17 c0       	rjmp	.+46     	; 0x66 <__do_clear_bss+0x8>
+  38:	b5 91       	lpm	r27, Z+
+  3a:	a5 91       	lpm	r26, Z+
+  3c:	35 91       	lpm	r19, Z+
+  3e:	25 91       	lpm	r18, Z+
+  40:	05 91       	lpm	r16, Z+
+  42:	07 fd       	sbrc	r16, 7
+  44:	0c c0       	rjmp	.+24     	; 0x5e <__do_clear_bss>
+  46:	95 91       	lpm	r25, Z+
+  48:	85 91       	lpm	r24, Z+
+  4a:	ef 01       	movw	r28, r30
+  4c:	f9 2f       	mov	r31, r25
+  4e:	e8 2f       	mov	r30, r24
+  50:	05 90       	lpm	r0, Z+
+  52:	0d 92       	st	X+, r0
+  54:	a2 17       	cp	r26, r18
+  56:	b3 07       	cpc	r27, r19
+  58:	d9 f7       	brne	.-10     	; 0x50 <__SREG__+0x11>
+  5a:	fe 01       	movw	r30, r28
+  5c:	04 c0       	rjmp	.+8      	; 0x66 <__do_clear_bss+0x8>
+
+0000005e <__do_clear_bss>:
+  5e:	1d 92       	st	X+, r1
+  60:	a2 17       	cp	r26, r18
+  62:	b3 07       	cpc	r27, r19
+  64:	e1 f7       	brne	.-8      	; 0x5e <__do_clear_bss>
+  66:	e3 32       	cpi	r30, 0x23	; 35
+  68:	f4 07       	cpc	r31, r20
+  6a:	31 f7       	brne	.-52     	; 0x38 <__do_copy_data+0x8>
+  6c:	7a d0       	rcall	.+244    	; 0x162 <main>
+  6e:	b7 c0       	rjmp	.+366    	; 0x1de <exit>
+
+00000070 <_exit>:
+  70:	f8 94       	cli
+
+00000072 <__stop_program>:
+  72:	ff cf       	rjmp	.-2      	; 0x72 <__stop_program>
+
+Disassembly of section .text:
+
+00000074 <__bad_interrupt>:
+  74:	c5 cf       	rjmp	.-118    	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.i2c_transfer:
+
+00000076 <i2c_transfer>:
+  76:	8e b9       	out	0x0e, r24	; 14
+  78:	8b e2       	ldi	r24, 0x2B	; 43
+  7a:	95 e0       	ldi	r25, 0x05	; 5
+  7c:	9a 95       	dec	r25
+  7e:	f1 f7       	brne	.-4      	; 0x7c <i2c_transfer+0x6>
+  80:	00 00       	nop
+  82:	8d b9       	out	0x0d, r24	; 13
+  84:	b2 9b       	sbis	0x16, 2	; 22
+  86:	fe cf       	rjmp	.-4      	; 0x84 <i2c_transfer+0xe>
+  88:	92 e0       	ldi	r25, 0x02	; 2
+  8a:	9a 95       	dec	r25
+  8c:	f1 f7       	brne	.-4      	; 0x8a <i2c_transfer+0x14>
+  8e:	00 c0       	rjmp	.+0      	; 0x90 <i2c_transfer+0x1a>
+  90:	8d b9       	out	0x0d, r24	; 13
+  92:	76 9b       	sbis	0x0e, 6	; 14
+  94:	f2 cf       	rjmp	.-28     	; 0x7a <i2c_transfer+0x4>
+  96:	85 e0       	ldi	r24, 0x05	; 5
+  98:	8a 95       	dec	r24
+  9a:	f1 f7       	brne	.-4      	; 0x98 <i2c_transfer+0x22>
+  9c:	00 00       	nop
+  9e:	8f b1       	in	r24, 0x0f	; 15
+  a0:	9f ef       	ldi	r25, 0xFF	; 255
+  a2:	9f b9       	out	0x0f, r25	; 15
+  a4:	b8 9a       	sbi	0x17, 0	; 23
+  a6:	08 95       	ret
+
+Disassembly of section .text.i2c_init:
+
+000000a8 <i2c_init>:
+  a8:	c0 9a       	sbi	0x18, 0	; 24
+  aa:	c2 9a       	sbi	0x18, 2	; 24
+  ac:	ba 9a       	sbi	0x17, 2	; 23
+  ae:	b8 9a       	sbi	0x17, 0	; 23
+  b0:	8f ef       	ldi	r24, 0xFF	; 255
+  b2:	8f b9       	out	0x0f, r24	; 15
+  b4:	8a e2       	ldi	r24, 0x2A	; 42
+  b6:	8d b9       	out	0x0d, r24	; 13
+  b8:	80 ef       	ldi	r24, 0xF0	; 240
+  ba:	8e b9       	out	0x0e, r24	; 14
+  bc:	08 95       	ret
+
+Disassembly of section .text.i2c_write:
+
+000000be <i2c_write>:
+  be:	c2 98       	cbi	0x18, 2	; 24
+  c0:	8f b9       	out	0x0f, r24	; 15
+  c2:	80 ef       	ldi	r24, 0xF0	; 240
+  c4:	d8 df       	rcall	.-80     	; 0x76 <i2c_transfer>
+  c6:	b8 98       	cbi	0x17, 0	; 23
+  c8:	8e ef       	ldi	r24, 0xFE	; 254
+  ca:	d5 df       	rcall	.-86     	; 0x76 <i2c_transfer>
+  cc:	80 95       	com	r24
+  ce:	81 70       	andi	r24, 0x01	; 1
+  d0:	08 95       	ret
+
+Disassembly of section .text.i2c_start:
+
+000000d2 <i2c_start>:
+  d2:	61 15       	cp	r22, r1
+  d4:	71 05       	cpc	r23, r1
+  d6:	b9 f0       	breq	.+46     	; 0x106 <i2c_start+0x34>
+  d8:	70 93 61 00 	sts	0x0061, r23	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  dc:	60 93 60 00 	sts	0x0060, r22	; 0x800060 <__DATA_REGION_ORIGIN__>
+  e0:	91 e0       	ldi	r25, 0x01	; 1
+  e2:	c2 9a       	sbi	0x18, 2	; 24
+  e4:	b2 9b       	sbis	0x16, 2	; 22
+  e6:	fe cf       	rjmp	.-4      	; 0xe4 <i2c_start+0x12>
+  e8:	22 e0       	ldi	r18, 0x02	; 2
+  ea:	2a 95       	dec	r18
+  ec:	f1 f7       	brne	.-4      	; 0xea <i2c_start+0x18>
+  ee:	00 c0       	rjmp	.+0      	; 0xf0 <i2c_start+0x1e>
+  f0:	c0 98       	cbi	0x18, 0	; 24
+  f2:	22 e0       	ldi	r18, 0x02	; 2
+  f4:	2a 95       	dec	r18
+  f6:	f1 f7       	brne	.-4      	; 0xf4 <i2c_start+0x22>
+  f8:	00 c0       	rjmp	.+0      	; 0xfa <i2c_start+0x28>
+  fa:	c2 98       	cbi	0x18, 2	; 24
+  fc:	c0 9a       	sbi	0x18, 0	; 24
+  fe:	77 99       	sbic	0x0e, 7	; 14
+ 100:	04 c0       	rjmp	.+8      	; 0x10a <i2c_start+0x38>
+ 102:	80 e0       	ldi	r24, 0x00	; 0
+ 104:	08 95       	ret
+ 106:	90 e0       	ldi	r25, 0x00	; 0
+ 108:	ec cf       	rjmp	.-40     	; 0xe2 <i2c_start+0x10>
+ 10a:	c2 98       	cbi	0x18, 2	; 24
+ 10c:	88 0f       	add	r24, r24
+ 10e:	89 2b       	or	r24, r25
+ 110:	8f b9       	out	0x0f, r24	; 15
+ 112:	80 ef       	ldi	r24, 0xF0	; 240
+ 114:	b0 df       	rcall	.-160    	; 0x76 <i2c_transfer>
+ 116:	b8 98       	cbi	0x17, 0	; 23
+ 118:	8e ef       	ldi	r24, 0xFE	; 254
+ 11a:	ad df       	rcall	.-166    	; 0x76 <i2c_transfer>
+ 11c:	80 95       	com	r24
+ 11e:	81 70       	andi	r24, 0x01	; 1
+ 120:	08 95       	ret
+
+Disassembly of section .text.i2c_stop:
+
+00000122 <i2c_stop>:
+ 122:	c0 98       	cbi	0x18, 0	; 24
+ 124:	c2 9a       	sbi	0x18, 2	; 24
+ 126:	b2 9b       	sbis	0x16, 2	; 22
+ 128:	fe cf       	rjmp	.-4      	; 0x126 <i2c_stop+0x4>
+ 12a:	82 e0       	ldi	r24, 0x02	; 2
+ 12c:	8a 95       	dec	r24
+ 12e:	f1 f7       	brne	.-4      	; 0x12c <i2c_stop+0xa>
+ 130:	00 c0       	rjmp	.+0      	; 0x132 <i2c_stop+0x10>
+ 132:	c0 9a       	sbi	0x18, 0	; 24
+ 134:	85 e0       	ldi	r24, 0x05	; 5
+ 136:	8a 95       	dec	r24
+ 138:	f1 f7       	brne	.-4      	; 0x136 <i2c_stop+0x14>
+ 13a:	00 00       	nop
+ 13c:	08 95       	ret
+
+Disassembly of section .text.__vector_8:
+
+0000013e <__vector_8>:
+ 13e:	8f 93       	push	r24
+ 140:	8f b7       	in	r24, 0x3f	; 63
+ 142:	8f 93       	push	r24
+ 144:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
+ 148:	8f 5f       	subi	r24, 0xFF	; 255
+ 14a:	80 93 63 00 	sts	0x0063, r24	; 0x800063 <counter>
+ 14e:	85 b1       	in	r24, 0x05	; 5
+ 150:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <_end>
+ 154:	88 b7       	in	r24, 0x38	; 56
+ 156:	82 60       	ori	r24, 0x02	; 2
+ 158:	88 bf       	out	0x38, r24	; 56
+ 15a:	8f 91       	pop	r24
+ 15c:	8f bf       	out	0x3f, r24	; 63
+ 15e:	8f 91       	pop	r24
+ 160:	18 95       	reti
+
+Disassembly of section .text.startup.main:
+
+00000162 <main>:
+ 162:	a2 df       	rcall	.-188    	; 0xa8 <i2c_init>
+ 164:	85 b7       	in	r24, 0x35	; 53
+ 166:	8f 7b       	andi	r24, 0xBF	; 191
+ 168:	85 bf       	out	0x35, r24	; 53
+ 16a:	80 b7       	in	r24, 0x30	; 48
+ 16c:	8f 69       	ori	r24, 0x9F	; 159
+ 16e:	80 bf       	out	0x30, r24	; 48
+ 170:	8f ef       	ldi	r24, 0xFF	; 255
+ 172:	8e bd       	out	0x2e, r24	; 46
+ 174:	b9 9a       	sbi	0x17, 1	; 23
+ 176:	1a bc       	out	0x2a, r1	; 42
+ 178:	83 b7       	in	r24, 0x33	; 51
+ 17a:	85 60       	ori	r24, 0x05	; 5
+ 17c:	83 bf       	out	0x33, r24	; 51
+ 17e:	12 be       	out	0x32, r1	; 50
+ 180:	8e ef       	ldi	r24, 0xFE	; 254
+ 182:	89 bd       	out	0x29, r24	; 41
+ 184:	87 b1       	in	r24, 0x07	; 7
+ 186:	82 62       	ori	r24, 0x22	; 34
+ 188:	87 b9       	out	0x07, r24	; 7
+ 18a:	83 b1       	in	r24, 0x03	; 3
+ 18c:	84 61       	ori	r24, 0x14	; 20
+ 18e:	83 b9       	out	0x03, r24	; 3
+ 190:	86 b1       	in	r24, 0x06	; 6
+ 192:	8e 6e       	ori	r24, 0xEE	; 238
+ 194:	86 b9       	out	0x06, r24	; 6
+ 196:	78 94       	sei
+ 198:	bb 9a       	sbi	0x17, 3	; 23
+ 19a:	b3 9a       	sbi	0x16, 3	; 22
+ 19c:	60 e0       	ldi	r22, 0x00	; 0
+ 19e:	70 e0       	ldi	r23, 0x00	; 0
+ 1a0:	80 e2       	ldi	r24, 0x20	; 32
+ 1a2:	97 df       	rcall	.-210    	; 0xd2 <i2c_start>
+ 1a4:	80 e0       	ldi	r24, 0x00	; 0
+ 1a6:	8b df       	rcall	.-234    	; 0xbe <i2c_write>
+ 1a8:	80 e0       	ldi	r24, 0x00	; 0
+ 1aa:	89 df       	rcall	.-238    	; 0xbe <i2c_write>
+ 1ac:	ba df       	rcall	.-140    	; 0x122 <i2c_stop>
+ 1ae:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <_end>
+ 1b2:	81 38       	cpi	r24, 0x81	; 129
+ 1b4:	28 f4       	brcc	.+10     	; 0x1c0 <main+0x5e>
+ 1b6:	c3 98       	cbi	0x18, 3	; 24
+ 1b8:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <_end>
+ 1bc:	81 38       	cpi	r24, 0x81	; 129
+ 1be:	d8 f3       	brcs	.-10     	; 0x1b6 <main+0x54>
+ 1c0:	c3 9a       	sbi	0x18, 3	; 24
+ 1c2:	60 e0       	ldi	r22, 0x00	; 0
+ 1c4:	70 e0       	ldi	r23, 0x00	; 0
+ 1c6:	80 e2       	ldi	r24, 0x20	; 32
+ 1c8:	84 df       	rcall	.-248    	; 0xd2 <i2c_start>
+ 1ca:	89 e0       	ldi	r24, 0x09	; 9
+ 1cc:	78 df       	rcall	.-272    	; 0xbe <i2c_write>
+ 1ce:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
+ 1d2:	75 df       	rcall	.-278    	; 0xbe <i2c_write>
+ 1d4:	a6 df       	rcall	.-180    	; 0x122 <i2c_stop>
+ 1d6:	eb cf       	rjmp	.-42     	; 0x1ae <main+0x4c>
+
+Disassembly of section .text.__dummy_fini:
+
+000001d8 <_fini>:
+ 1d8:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+000001da <__funcs_on_exit>:
+ 1da:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+000001dc <__simulator_exit>:
+ 1dc:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+000001de <exit>:
+ 1de:	ec 01       	movw	r28, r24
+ 1e0:	fc df       	rcall	.-8      	; 0x1da <__funcs_on_exit>
+ 1e2:	fa df       	rcall	.-12     	; 0x1d8 <_fini>
+ 1e4:	ce 01       	movw	r24, r28
+ 1e6:	fa df       	rcall	.-12     	; 0x1dc <__simulator_exit>
+ 1e8:	ce 01       	movw	r24, r28
+ 1ea:	00 d0       	rcall	.+0      	; 0x1ec <_Exit>
+
+Disassembly of section .text._Exit:
+
+000001ec <_Exit>:
+ 1ec:	41 df       	rcall	.-382    	; 0x70 <_exit>

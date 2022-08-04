@@ -1,0 +1,512 @@
+
+ATtiny85_GameConsole.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000074  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  000002b2  2**0
+                  ALLOC, LOAD, DATA
+  2 .bss          00000002  00800060  00800060  000002b2  2**0
+                  ALLOC
+  3 .comment      0000002f  00000000  00000000  000002b2  2**0
+                  CONTENTS, READONLY
+  4 .stack.descriptors.hdr 0000000e  00000000  00000000  000002e1  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000098  00000000  00000000  000002ef  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000e9f  00000000  00000000  00000387  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000065b  00000000  00000000  00001226  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000574  00000000  00000000  00001881  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000110  00000000  00000000  00001df8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000199  00000000  00000000  00001f08  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000002bd  00000000  00000000  000020a1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000078  00000000  00000000  0000235e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text         00000002  00000214  00000214  000002a8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000023d8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .text.i2c_transfer 00000026  0000013e  0000013e  000001d2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.i2c_init 00000026  00000164  00000164  000001f8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.i2c_write 00000022  0000018a  0000018a  0000021e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.i2c_start 00000060  00000074  00000074  00000108  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.i2c_stop 0000001c  000001ac  000001ac  00000240  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.timer1_init 00000018  000001c8  000001c8  0000025c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.timer0_init 00000010  000001f6  000001f6  0000028a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.adc1_init 00000016  000001e0  000001e0  00000274  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.__vector_8 0000002e  00000110  00000110  000001a4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.main    0000003c  000000d4  000000d4  00000168  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .bss.adcVal   00000001  00800062  00800062  000002b2  2**0
+                  ALLOC
+ 26 .bss.counter  00000001  00800063  00800063  000002b2  2**0
+                  ALLOC
+ 27 .text.__dummy_fini 00000002  00000216  00000216  000002aa  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .text.__dummy_funcs_on_exit 00000002  00000218  00000218  000002ac  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .text.__dummy_simulator_exit 00000002  0000021a  0000021a  000002ae  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 30 .text.exit    0000000e  00000206  00000206  0000029a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .text._Exit   00000002  0000021c  0000021c  000002b0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	11 c0       	rjmp	.+34     	; 0x24 <__ctors_end>
+   2:	08 c1       	rjmp	.+528    	; 0x214 <__bad_interrupt>
+   4:	07 c1       	rjmp	.+526    	; 0x214 <__bad_interrupt>
+   6:	06 c1       	rjmp	.+524    	; 0x214 <__bad_interrupt>
+   8:	05 c1       	rjmp	.+522    	; 0x214 <__bad_interrupt>
+   a:	04 c1       	rjmp	.+520    	; 0x214 <__bad_interrupt>
+   c:	03 c1       	rjmp	.+518    	; 0x214 <__bad_interrupt>
+   e:	02 c1       	rjmp	.+516    	; 0x214 <__bad_interrupt>
+  10:	7f c0       	rjmp	.+254    	; 0x110 <__vector_8>
+  12:	00 c1       	rjmp	.+512    	; 0x214 <__bad_interrupt>
+  14:	ff c0       	rjmp	.+510    	; 0x214 <__bad_interrupt>
+  16:	fe c0       	rjmp	.+508    	; 0x214 <__bad_interrupt>
+  18:	fd c0       	rjmp	.+506    	; 0x214 <__bad_interrupt>
+  1a:	fc c0       	rjmp	.+504    	; 0x214 <__bad_interrupt>
+  1c:	fb c0       	rjmp	.+502    	; 0x214 <__bad_interrupt>
+
+0000001e <.dinit>:
+  1e:	00 60       	ori	r16, 0x00	; 0
+  20:	00 64       	ori	r16, 0x40	; 64
+  22:	80 00       	.word	0x0080	; ????
+
+00000024 <__ctors_end>:
+  24:	11 24       	eor	r1, r1
+  26:	1f be       	out	0x3f, r1	; 63
+  28:	cf e5       	ldi	r28, 0x5F	; 95
+  2a:	d2 e0       	ldi	r29, 0x02	; 2
+  2c:	de bf       	out	0x3e, r29	; 62
+  2e:	cd bf       	out	0x3d, r28	; 61
+
+00000030 <__do_copy_data>:
+  30:	ee e1       	ldi	r30, 0x1E	; 30
+  32:	f0 e0       	ldi	r31, 0x00	; 0
+  34:	40 e0       	ldi	r20, 0x00	; 0
+  36:	17 c0       	rjmp	.+46     	; 0x66 <__do_clear_bss+0x8>
+  38:	b5 91       	lpm	r27, Z+
+  3a:	a5 91       	lpm	r26, Z+
+  3c:	35 91       	lpm	r19, Z+
+  3e:	25 91       	lpm	r18, Z+
+  40:	05 91       	lpm	r16, Z+
+  42:	07 fd       	sbrc	r16, 7
+  44:	0c c0       	rjmp	.+24     	; 0x5e <__do_clear_bss>
+  46:	95 91       	lpm	r25, Z+
+  48:	85 91       	lpm	r24, Z+
+  4a:	ef 01       	movw	r28, r30
+  4c:	f9 2f       	mov	r31, r25
+  4e:	e8 2f       	mov	r30, r24
+  50:	05 90       	lpm	r0, Z+
+  52:	0d 92       	st	X+, r0
+  54:	a2 17       	cp	r26, r18
+  56:	b3 07       	cpc	r27, r19
+  58:	d9 f7       	brne	.-10     	; 0x50 <__SREG__+0x11>
+  5a:	fe 01       	movw	r30, r28
+  5c:	04 c0       	rjmp	.+8      	; 0x66 <__do_clear_bss+0x8>
+
+0000005e <__do_clear_bss>:
+  5e:	1d 92       	st	X+, r1
+  60:	a2 17       	cp	r26, r18
+  62:	b3 07       	cpc	r27, r19
+  64:	e1 f7       	brne	.-8      	; 0x5e <__do_clear_bss>
+  66:	e3 32       	cpi	r30, 0x23	; 35
+  68:	f4 07       	cpc	r31, r20
+  6a:	31 f7       	brne	.-52     	; 0x38 <__do_copy_data+0x8>
+  6c:	33 d0       	rcall	.+102    	; 0xd4 <main>
+  6e:	cb c0       	rjmp	.+406    	; 0x206 <exit>
+
+00000070 <_exit>:
+  70:	f8 94       	cli
+
+00000072 <__stop_program>:
+  72:	ff cf       	rjmp	.-2      	; 0x72 <__stop_program>
+
+Disassembly of section .text:
+
+00000214 <__bad_interrupt>:
+ 214:	f5 ce       	rjmp	.-534    	; 0x0 <__vectors>
+
+Disassembly of section .text.i2c_transfer:
+
+0000013e <i2c_transfer>:
+  return true;                                                    // Start successfully completed
+}
+
+bool i2c_restart(uint8_t address, uint16_t readcount) {
+  return i2c_start(address, readcount);
+}
+ 13e:	8e b9       	out	0x0e, r24	; 14
+ 140:	00 c0       	rjmp	.+0      	; 0x142 <i2c_transfer+0x4>
+ 142:	8b e2       	ldi	r24, 0x2B	; 43
+ 144:	8d b9       	out	0x0d, r24	; 13
+ 146:	b2 9b       	sbis	0x16, 2	; 22
+ 148:	fe cf       	rjmp	.-4      	; 0x146 <i2c_transfer+0x8>
+ 14a:	00 00       	nop
+ 14c:	8b e2       	ldi	r24, 0x2B	; 43
+ 14e:	8d b9       	out	0x0d, r24	; 13
+ 150:	76 9b       	sbis	0x0e, 6	; 14
+ 152:	f6 cf       	rjmp	.-20     	; 0x140 <i2c_transfer+0x2>
+ 154:	00 c0       	rjmp	.+0      	; 0x156 <i2c_transfer+0x18>
+ 156:	8f b1       	in	r24, 0x0f	; 15
+ 158:	9f ef       	ldi	r25, 0xFF	; 255
+ 15a:	9f b9       	out	0x0f, r25	; 15
+ 15c:	97 b3       	in	r25, 0x17	; 23
+ 15e:	91 60       	ori	r25, 0x01	; 1
+ 160:	97 bb       	out	0x17, r25	; 23
+ 162:	08 95       	ret
+
+Disassembly of section .text.i2c_init:
+
+00000164 <i2c_init>:
+ 164:	88 b3       	in	r24, 0x18	; 24
+ 166:	81 60       	ori	r24, 0x01	; 1
+ 168:	88 bb       	out	0x18, r24	; 24
+ 16a:	88 b3       	in	r24, 0x18	; 24
+ 16c:	84 60       	ori	r24, 0x04	; 4
+ 16e:	88 bb       	out	0x18, r24	; 24
+ 170:	87 b3       	in	r24, 0x17	; 23
+ 172:	84 60       	ori	r24, 0x04	; 4
+ 174:	87 bb       	out	0x17, r24	; 23
+ 176:	87 b3       	in	r24, 0x17	; 23
+ 178:	81 60       	ori	r24, 0x01	; 1
+ 17a:	87 bb       	out	0x17, r24	; 23
+ 17c:	8f ef       	ldi	r24, 0xFF	; 255
+ 17e:	8f b9       	out	0x0f, r24	; 15
+ 180:	8a e2       	ldi	r24, 0x2A	; 42
+ 182:	8d b9       	out	0x0d, r24	; 13
+ 184:	80 ef       	ldi	r24, 0xF0	; 240
+ 186:	8e b9       	out	0x0e, r24	; 14
+ 188:	08 95       	ret
+
+Disassembly of section .text.i2c_write:
+
+0000018a <i2c_write>:
+ 18a:	98 b3       	in	r25, 0x18	; 24
+ 18c:	9b 7f       	andi	r25, 0xFB	; 251
+ 18e:	98 bb       	out	0x18, r25	; 24
+ 190:	8f b9       	out	0x0f, r24	; 15
+ 192:	80 ef       	ldi	r24, 0xF0	; 240
+ 194:	d4 df       	rcall	.-88     	; 0x13e <i2c_transfer>
+ 196:	87 b3       	in	r24, 0x17	; 23
+ 198:	8e 7f       	andi	r24, 0xFE	; 254
+ 19a:	87 bb       	out	0x17, r24	; 23
+ 19c:	8e ef       	ldi	r24, 0xFE	; 254
+ 19e:	cf df       	rcall	.-98     	; 0x13e <i2c_transfer>
+ 1a0:	80 ff       	sbrs	r24, 0
+ 1a2:	02 c0       	rjmp	.+4      	; 0x1a8 <i2c_write+0x1e>
+ 1a4:	80 e0       	ldi	r24, 0x00	; 0
+ 1a6:	08 95       	ret
+ 1a8:	81 e0       	ldi	r24, 0x01	; 1
+ 1aa:	08 95       	ret
+
+Disassembly of section .text.i2c_start:
+
+00000074 <i2c_start>:
+  74:	61 15       	cp	r22, r1
+  76:	71 05       	cpc	r23, r1
+  78:	31 f0       	breq	.+12     	; 0x86 <i2c_start+0x12>
+  7a:	70 93 61 00 	sts	0x0061, r23	; 0x800061 <_edata+0x1>
+  7e:	60 93 60 00 	sts	0x0060, r22	; 0x800060 <_edata>
+  82:	61 e0       	ldi	r22, 0x01	; 1
+  84:	70 e0       	ldi	r23, 0x00	; 0
+  86:	88 0f       	add	r24, r24
+  88:	68 2b       	or	r22, r24
+  8a:	88 b3       	in	r24, 0x18	; 24
+  8c:	84 60       	ori	r24, 0x04	; 4
+  8e:	88 bb       	out	0x18, r24	; 24
+  90:	b2 9b       	sbis	0x16, 2	; 22
+  92:	fe cf       	rjmp	.-4      	; 0x90 <i2c_start+0x1c>
+  94:	00 00       	nop
+  96:	88 b3       	in	r24, 0x18	; 24
+  98:	8e 7f       	andi	r24, 0xFE	; 254
+  9a:	88 bb       	out	0x18, r24	; 24
+  9c:	00 00       	nop
+  9e:	88 b3       	in	r24, 0x18	; 24
+  a0:	8b 7f       	andi	r24, 0xFB	; 251
+  a2:	88 bb       	out	0x18, r24	; 24
+  a4:	88 b3       	in	r24, 0x18	; 24
+  a6:	81 60       	ori	r24, 0x01	; 1
+  a8:	88 bb       	out	0x18, r24	; 24
+  aa:	77 9b       	sbis	0x0e, 7	; 14
+  ac:	0f c0       	rjmp	.+30     	; 0xcc <i2c_start+0x58>
+  ae:	88 b3       	in	r24, 0x18	; 24
+  b0:	8b 7f       	andi	r24, 0xFB	; 251
+  b2:	88 bb       	out	0x18, r24	; 24
+  b4:	6f b9       	out	0x0f, r22	; 15
+  b6:	80 ef       	ldi	r24, 0xF0	; 240
+  b8:	42 d0       	rcall	.+132    	; 0x13e <i2c_transfer>
+  ba:	87 b3       	in	r24, 0x17	; 23
+  bc:	8e 7f       	andi	r24, 0xFE	; 254
+  be:	87 bb       	out	0x17, r24	; 23
+  c0:	8e ef       	ldi	r24, 0xFE	; 254
+  c2:	3d d0       	rcall	.+122    	; 0x13e <i2c_transfer>
+  c4:	80 ff       	sbrs	r24, 0
+  c6:	04 c0       	rjmp	.+8      	; 0xd0 <i2c_start+0x5c>
+  c8:	80 e0       	ldi	r24, 0x00	; 0
+  ca:	08 95       	ret
+  cc:	80 e0       	ldi	r24, 0x00	; 0
+  ce:	08 95       	ret
+  d0:	81 e0       	ldi	r24, 0x01	; 1
+  d2:	08 95       	ret
+
+Disassembly of section .text.i2c_stop:
+
+000001ac <i2c_stop>:
+
+void i2c_stop (void) {
+  PORTB &= ~(1<<PIN_USI_SDA);                                  // Pull SDA low.
+ 1ac:	88 b3       	in	r24, 0x18	; 24
+ 1ae:	8e 7f       	andi	r24, 0xFE	; 254
+ 1b0:	88 bb       	out	0x18, r24	; 24
+  PORTB |= 1<<PIN_USI_SCL;                                  // Release SCL.
+ 1b2:	88 b3       	in	r24, 0x18	; 24
+ 1b4:	84 60       	ori	r24, 0x04	; 4
+ 1b6:	88 bb       	out	0x18, r24	; 24
+  while (!(PIN_USI_CL & 1<<PIN_USI_SCL));                         // Wait for SCL to go high.
+ 1b8:	b2 9b       	sbis	0x16, 2	; 22
+ 1ba:	fe cf       	rjmp	.-4      	; 0x1b8 <i2c_stop+0xc>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1bc:	00 00       	nop
+  DELAY_T4TWI;
+  PORTB |= 1<<PIN_USI_SDA;                                     // Release SDA.
+ 1be:	88 b3       	in	r24, 0x18	; 24
+ 1c0:	81 60       	ori	r24, 0x01	; 1
+ 1c2:	88 bb       	out	0x18, r24	; 24
+ 1c4:	00 c0       	rjmp	.+0      	; 0x1c6 <i2c_stop+0x1a>
+ 1c6:	08 95       	ret
+
+Disassembly of section .text.timer1_init:
+
+000001c8 <timer1_init>:
+
+
+
+/* Set ut timer1 to toggle every 500ms and output on PB1 */
+void timer1_init(void) {
+	MCUCR &= ~(1 << PUD);
+ 1c8:	85 b7       	in	r24, 0x35	; 53
+ 1ca:	8f 7b       	andi	r24, 0xBF	; 191
+ 1cc:	85 bf       	out	0x35, r24	; 53
+
+	// Clear on Compare | Toggle OC1A on compare | PCK/16384 (64 ticks/s)
+	TCCR1 |= (1 << CTC1) | (1 << COM1A0) | (1 << CS13) | (1 << CS12) | (1 << CS11) | (1 << CS10);
+ 1ce:	80 b7       	in	r24, 0x30	; 48
+ 1d0:	8f 69       	ori	r24, 0x9F	; 159
+ 1d2:	80 bf       	out	0x30, r24	; 48
+
+	OCR1A = 0xFF;
+ 1d4:	8f ef       	ldi	r24, 0xFF	; 255
+ 1d6:	8e bd       	out	0x2e, r24	; 46
+
+	DDRB |= (1 << PB1);
+ 1d8:	87 b3       	in	r24, 0x17	; 23
+ 1da:	82 60       	ori	r24, 0x02	; 2
+ 1dc:	87 bb       	out	0x17, r24	; 23
+ 1de:	08 95       	ret
+
+Disassembly of section .text.timer0_init:
+
+000001f6 <timer0_init>:
+}
+
+void timer0_init(void) {
+	// Output on compare : off | WGM : off
+	TCCR0A = 0;
+ 1f6:	1a bc       	out	0x2a, r1	; 42
+
+	// Clock select prescaler : clk/1024 = 7812
+	TCCR0B |=   (1 << CS02) |
+ 1f8:	83 b7       	in	r24, 0x33	; 51
+ 1fa:	85 60       	ori	r24, 0x05	; 5
+ 1fc:	83 bf       	out	0x33, r24	; 51
+	(0 << CS01) |
+	(1 << CS00);
+
+	TCNT0=0;
+ 1fe:	12 be       	out	0x32, r1	; 50
+
+	// Compre A register
+	OCR0A = 0xFE;
+ 200:	8e ef       	ldi	r24, 0xFE	; 254
+ 202:	89 bd       	out	0x29, r24	; 41
+ 204:	08 95       	ret
+
+Disassembly of section .text.adc1_init:
+
+000001e0 <adc1_init>:
+}
+
+/* Set up ADC2 as input for PB4, Vref = Vcc */
+void adc1_init()
+{
+	timer0_init();
+ 1e0:	0a d0       	rcall	.+20     	; 0x1f6 <timer0_init>
+	// Voltage ref = Vcc |Left adjust | Mux = 0x02, input adc1 = PB4.
+	ADMUX |=    (1 << ADLAR) |
+ 1e2:	87 b1       	in	r24, 0x07	; 7
+ 1e4:	82 62       	ori	r24, 0x22	; 34
+ 1e6:	87 b9       	out	0x07, r24	; 7
+	(0 << MUX0)  |
+	(1 << MUX1) ;
+
+	// Autotrigger on Timer0 OVF | Digital input disable for ADC2
+	ADCSRB |=   (1 << ADTS2) |
+ 1e8:	83 b1       	in	r24, 0x03	; 3
+ 1ea:	84 61       	ori	r24, 0x14	; 20
+ 1ec:	83 b9       	out	0x03, r24	; 3
+	(0 << ADTS1) |
+	(0 << ADTS0) |
+	(1 << ADC2D);
+
+	// Enable adc adc | Enable auto trigger |prescaler = 64 | Interrupt enable | Enable start conversion
+	ADCSRA |=   (1 << ADEN) |
+ 1ee:	86 b1       	in	r24, 0x06	; 6
+ 1f0:	8e 6e       	ori	r24, 0xEE	; 238
+ 1f2:	86 b9       	out	0x06, r24	; 6
+ 1f4:	08 95       	ret
+
+Disassembly of section .text.__vector_8:
+
+00000110 <__vector_8>:
+
+uint8_t counter = 0;
+uint8_t adcVal = 0;
+
+ISR(ADC_vect)
+{
+ 110:	1f 92       	push	r1
+ 112:	0f 92       	push	r0
+ 114:	0f b6       	in	r0, 0x3f	; 63
+ 116:	0f 92       	push	r0
+ 118:	11 24       	eor	r1, r1
+ 11a:	8f 93       	push	r24
+	counter++;
+ 11c:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
+ 120:	8f 5f       	subi	r24, 0xFF	; 255
+ 122:	80 93 63 00 	sts	0x0063, r24	; 0x800063 <counter>
+	adcVal = ADCH;
+ 126:	85 b1       	in	r24, 0x05	; 5
+ 128:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <_end>
+	TIFR |= (1 << TOV0); // Clear timer0 OVF
+ 12c:	88 b7       	in	r24, 0x38	; 56
+ 12e:	82 60       	ori	r24, 0x02	; 2
+ 130:	88 bf       	out	0x38, r24	; 56
+}
+ 132:	8f 91       	pop	r24
+ 134:	0f 90       	pop	r0
+ 136:	0f be       	out	0x3f, r0	; 63
+ 138:	0f 90       	pop	r0
+ 13a:	1f 90       	pop	r1
+ 13c:	18 95       	reti
+
+Disassembly of section .text.main:
+
+000000d4 <main>:
+
+int main()
+{
+	i2c_init();
+  d4:	47 d0       	rcall	.+142    	; 0x164 <i2c_init>
+	timer1_init();
+  d6:	78 d0       	rcall	.+240    	; 0x1c8 <timer1_init>
+	adc1_init();
+  d8:	83 d0       	rcall	.+262    	; 0x1e0 <adc1_init>
+	sei();
+  da:	78 94       	sei
+
+	DDRB |= (1 << PB3); // Set PB3 as output
+  dc:	87 b3       	in	r24, 0x17	; 23
+  de:	88 60       	ori	r24, 0x08	; 8
+  e0:	87 bb       	out	0x17, r24	; 23
+	PINB |= (1 << PB3);
+  e2:	86 b3       	in	r24, 0x16	; 22
+  e4:	88 60       	ori	r24, 0x08	; 8
+  e6:	86 bb       	out	0x16, r24	; 22
+	while(1)
+	{
+		// ADCSRA |= (1 << ADSC); // Start conversion
+		// while(ADCSRA & (1 << ADSC)); // Conversion complete
+
+		if (adcVal > 128) {
+  e8:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <_end>
+  ec:	81 38       	cpi	r24, 0x81	; 129
+  ee:	60 f0       	brcs	.+24     	; 0x108 <main+0x34>
+			PORTB |= (1 << PB3); // Set PB3 as output
+  f0:	88 b3       	in	r24, 0x18	; 24
+  f2:	88 60       	ori	r24, 0x08	; 8
+  f4:	88 bb       	out	0x18, r24	; 24
+			i2c_start(ADDRS, 0);
+  f6:	60 e0       	ldi	r22, 0x00	; 0
+  f8:	70 e0       	ldi	r23, 0x00	; 0
+  fa:	80 e2       	ldi	r24, 0x20	; 32
+  fc:	bb df       	rcall	.-138    	; 0x74 <_etext>
+			i2c_write(counter);
+  fe:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
+ 102:	43 d0       	rcall	.+134    	; 0x18a <i2c_write>
+			i2c_stop();
+ 104:	53 d0       	rcall	.+166    	; 0x1ac <i2c_stop>
+ 106:	f0 cf       	rjmp	.-32     	; 0xe8 <main+0x14>
+		}
+		else{
+			PORTB &= ~(1 << PB3);
+ 108:	88 b3       	in	r24, 0x18	; 24
+ 10a:	87 7f       	andi	r24, 0xF7	; 247
+ 10c:	88 bb       	out	0x18, r24	; 24
+ 10e:	ec cf       	rjmp	.-40     	; 0xe8 <main+0x14>
+
+Disassembly of section .text.__dummy_fini:
+
+00000216 <_fini>:
+ 216:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+00000218 <__funcs_on_exit>:
+ 218:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+0000021a <__simulator_exit>:
+ 21a:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+00000206 <exit>:
+ 206:	ec 01       	movw	r28, r24
+ 208:	07 d0       	rcall	.+14     	; 0x218 <__funcs_on_exit>
+ 20a:	05 d0       	rcall	.+10     	; 0x216 <_fini>
+ 20c:	ce 01       	movw	r24, r28
+ 20e:	05 d0       	rcall	.+10     	; 0x21a <__simulator_exit>
+ 210:	ce 01       	movw	r24, r28
+ 212:	04 d0       	rcall	.+8      	; 0x21c <_Exit>
+
+Disassembly of section .text._Exit:
+
+0000021c <_Exit>:
+ 21c:	29 df       	rcall	.-430    	; 0x70 <_exit>
