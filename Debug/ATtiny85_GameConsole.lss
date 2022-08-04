@@ -5,87 +5,99 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         00000074  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  000002b2  2**0
+  1 .data         00000000  00800060  00800060  000003ea  2**0
                   ALLOC, LOAD, DATA
-  2 .bss          00000002  00800060  00800060  000002b2  2**0
+  2 .bss          00000002  00800060  00800060  000003ea  2**0
                   ALLOC
-  3 .comment      0000002f  00000000  00000000  000002b2  2**0
+  3 .comment      0000002f  00000000  00000000  000003ea  2**0
                   CONTENTS, READONLY
-  4 .stack.descriptors.hdr 0000000e  00000000  00000000  000002e1  2**0
+  4 .stack.descriptors.hdr 0000000e  00000000  00000000  00000419  2**0
                   CONTENTS, READONLY
-  5 .debug_aranges 00000098  00000000  00000000  000002ef  2**0
+  5 .debug_aranges 000000e8  00000000  00000000  00000427  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00000e9f  00000000  00000000  00000387  2**0
+  6 .debug_info   0000178b  00000000  00000000  0000050f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 0000065b  00000000  00000000  00001226  2**0
+  7 .debug_abbrev 0000079c  00000000  00000000  00001c9a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000574  00000000  00000000  00001881  2**0
+  8 .debug_line   0000085f  00000000  00000000  00002436  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000110  00000000  00000000  00001df8  2**2
+  9 .debug_frame  000001b8  00000000  00000000  00002c98  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000199  00000000  00000000  00001f08  2**0
+ 10 .debug_str    000001d0  00000000  00000000  00002e50  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    000002bd  00000000  00000000  000020a1  2**0
+ 11 .debug_loc    00000508  00000000  00000000  00003020  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000078  00000000  00000000  0000235e  2**0
+ 12 .debug_ranges 000000b8  00000000  00000000  00003528  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .text         00000002  00000214  00000214  000002a8  2**1
+ 13 .text         00000002  0000034c  0000034c  000003e0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 14 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000023d8  2**2
+ 14 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000035e0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 15 .text.i2c_transfer 00000026  0000013e  0000013e  000001d2  2**1
+ 15 .text.i2c_transfer 00000038  000001fa  000001fa  0000028e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .text.i2c_init 00000026  00000164  00000164  000001f8  2**1
+ 16 .text.i2c_init 00000026  00000288  00000288  0000031c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 17 .text.i2c_write 00000022  0000018a  0000018a  0000021e  2**1
+ 17 .text.i2c_write 00000022  000002ae  000002ae  00000342  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 18 .text.i2c_start 00000060  00000074  00000074  00000108  2**1
+ 18 .text.i2c_start 0000006c  00000154  00000154  000001e8  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 19 .text.i2c_stop 0000001c  000001ac  000001ac  00000240  2**1
+ 19 .text.i2c_stop 00000028  00000260  00000260  000002f4  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 20 .text.timer1_init 00000018  000001c8  000001c8  0000025c  2**1
+ 20 .text.timer1_init 00000018  000002ea  000002ea  0000037e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.timer0_init 00000010  000001f6  000001f6  0000028a  2**1
+ 21 .text.timer0_init 00000010  00000318  00000318  000003ac  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .text.adc1_init 00000016  000001e0  000001e0  00000274  2**1
+ 22 .text.adc1_init 00000016  00000302  00000302  00000396  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 23 .text.__vector_8 0000002e  00000110  00000110  000001a4  2**1
+ 23 .text.__vector_8 0000002e  00000232  00000232  000002c6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 24 .text.main    0000003c  000000d4  000000d4  00000168  2**1
+ 24 .text.main    0000006e  000000e6  000000e6  0000017a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 25 .bss.adcVal   00000001  00800062  00800062  000002b2  2**0
+ 25 .bss.adcVal   00000001  00800062  00800062  000003ea  2**0
                   ALLOC
- 26 .bss.counter  00000001  00800063  00800063  000002b2  2**0
+ 26 .bss.counter  00000001  00800063  00800063  000003ea  2**0
                   ALLOC
- 27 .text.__dummy_fini 00000002  00000216  00000216  000002aa  2**1
+ 27 .text.OLED_send_byte 00000004  00000344  00000344  000003d8  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 28 .text.__dummy_funcs_on_exit 00000002  00000218  00000218  000002ac  2**1
+ 28 .text.OLED_send_command 0000001a  000002d0  000002d0  00000364  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 29 .text.__dummy_simulator_exit 00000002  0000021a  0000021a  000002ae  2**1
+ 29 .text.OLED_init 00000072  00000074  00000074  00000108  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 30 .text.exit    0000000e  00000206  00000206  0000029a  2**1
+ 30 .text.OLED_send_data_start 0000000e  00000328  00000328  000003bc  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 31 .text._Exit   00000002  0000021c  0000021c  000002b0  2**1
+ 31 .text.OLED_send_data_stop 00000004  00000348  00000348  000003dc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 32 .text.OLED_fillscreen 0000003a  000001c0  000001c0  00000254  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 33 .text.__dummy_fini 00000002  0000034e  0000034e  000003e2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 34 .text.__dummy_funcs_on_exit 00000002  00000350  00000350  000003e4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 35 .text.__dummy_simulator_exit 00000002  00000352  00000352  000003e6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 36 .text.exit    0000000e  00000336  00000336  000003ca  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 37 .text._Exit   00000002  00000354  00000354  000003e8  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	11 c0       	rjmp	.+34     	; 0x24 <__ctors_end>
-   2:	08 c1       	rjmp	.+528    	; 0x214 <__bad_interrupt>
-   4:	07 c1       	rjmp	.+526    	; 0x214 <__bad_interrupt>
-   6:	06 c1       	rjmp	.+524    	; 0x214 <__bad_interrupt>
-   8:	05 c1       	rjmp	.+522    	; 0x214 <__bad_interrupt>
-   a:	04 c1       	rjmp	.+520    	; 0x214 <__bad_interrupt>
-   c:	03 c1       	rjmp	.+518    	; 0x214 <__bad_interrupt>
-   e:	02 c1       	rjmp	.+516    	; 0x214 <__bad_interrupt>
-  10:	7f c0       	rjmp	.+254    	; 0x110 <__vector_8>
-  12:	00 c1       	rjmp	.+512    	; 0x214 <__bad_interrupt>
-  14:	ff c0       	rjmp	.+510    	; 0x214 <__bad_interrupt>
-  16:	fe c0       	rjmp	.+508    	; 0x214 <__bad_interrupt>
-  18:	fd c0       	rjmp	.+506    	; 0x214 <__bad_interrupt>
-  1a:	fc c0       	rjmp	.+504    	; 0x214 <__bad_interrupt>
-  1c:	fb c0       	rjmp	.+502    	; 0x214 <__bad_interrupt>
+   2:	a4 c1       	rjmp	.+840    	; 0x34c <__bad_interrupt>
+   4:	a3 c1       	rjmp	.+838    	; 0x34c <__bad_interrupt>
+   6:	a2 c1       	rjmp	.+836    	; 0x34c <__bad_interrupt>
+   8:	a1 c1       	rjmp	.+834    	; 0x34c <__bad_interrupt>
+   a:	a0 c1       	rjmp	.+832    	; 0x34c <__bad_interrupt>
+   c:	9f c1       	rjmp	.+830    	; 0x34c <__bad_interrupt>
+   e:	9e c1       	rjmp	.+828    	; 0x34c <__bad_interrupt>
+  10:	10 c1       	rjmp	.+544    	; 0x232 <__vector_8>
+  12:	9c c1       	rjmp	.+824    	; 0x34c <__bad_interrupt>
+  14:	9b c1       	rjmp	.+822    	; 0x34c <__bad_interrupt>
+  16:	9a c1       	rjmp	.+820    	; 0x34c <__bad_interrupt>
+  18:	99 c1       	rjmp	.+818    	; 0x34c <__bad_interrupt>
+  1a:	98 c1       	rjmp	.+816    	; 0x34c <__bad_interrupt>
+  1c:	97 c1       	rjmp	.+814    	; 0x34c <__bad_interrupt>
 
 0000001e <.dinit>:
   1e:	00 60       	ori	r16, 0x00	; 0
@@ -133,8 +145,8 @@ Disassembly of section .text:
   66:	e3 32       	cpi	r30, 0x23	; 35
   68:	f4 07       	cpc	r31, r20
   6a:	31 f7       	brne	.-52     	; 0x38 <__do_copy_data+0x8>
-  6c:	33 d0       	rcall	.+102    	; 0xd4 <main>
-  6e:	cb c0       	rjmp	.+406    	; 0x206 <exit>
+  6c:	3c d0       	rcall	.+120    	; 0xe6 <main>
+  6e:	63 c1       	rjmp	.+710    	; 0x336 <exit>
 
 00000070 <_exit>:
   70:	f8 94       	cli
@@ -144,369 +156,641 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-00000214 <__bad_interrupt>:
- 214:	f5 ce       	rjmp	.-534    	; 0x0 <__vectors>
+0000034c <__bad_interrupt>:
+ 34c:	59 ce       	rjmp	.-846    	; 0x0 <__vectors>
 
 Disassembly of section .text.i2c_transfer:
 
-0000013e <i2c_transfer>:
-  return true;                                                    // Start successfully completed
+000001fa <i2c_transfer>:
 }
 
-bool i2c_restart(uint8_t address, uint16_t readcount) {
-  return i2c_start(address, readcount);
+uint8_t i2c_readLast (void) {
+  I2Ccount = 0;
+  return i2c_read();
 }
- 13e:	8e b9       	out	0x0e, r24	; 14
- 140:	00 c0       	rjmp	.+0      	; 0x142 <i2c_transfer+0x4>
- 142:	8b e2       	ldi	r24, 0x2B	; 43
- 144:	8d b9       	out	0x0d, r24	; 13
- 146:	b2 9b       	sbis	0x16, 2	; 22
- 148:	fe cf       	rjmp	.-4      	; 0x146 <i2c_transfer+0x8>
- 14a:	00 00       	nop
- 14c:	8b e2       	ldi	r24, 0x2B	; 43
- 14e:	8d b9       	out	0x0d, r24	; 13
- 150:	76 9b       	sbis	0x0e, 6	; 14
- 152:	f6 cf       	rjmp	.-20     	; 0x140 <i2c_transfer+0x2>
- 154:	00 c0       	rjmp	.+0      	; 0x156 <i2c_transfer+0x18>
- 156:	8f b1       	in	r24, 0x0f	; 15
- 158:	9f ef       	ldi	r25, 0xFF	; 255
- 15a:	9f b9       	out	0x0f, r25	; 15
- 15c:	97 b3       	in	r25, 0x17	; 23
- 15e:	91 60       	ori	r25, 0x01	; 1
- 160:	97 bb       	out	0x17, r25	; 23
- 162:	08 95       	ret
+ 1fa:	8e b9       	out	0x0e, r24	; 14
+ 1fc:	8d e0       	ldi	r24, 0x0D	; 13
+ 1fe:	8a 95       	dec	r24
+ 200:	f1 f7       	brne	.-4      	; 0x1fe <i2c_transfer+0x4>
+ 202:	00 00       	nop
+ 204:	8b e2       	ldi	r24, 0x2B	; 43
+ 206:	8d b9       	out	0x0d, r24	; 13
+ 208:	b2 9b       	sbis	0x16, 2	; 22
+ 20a:	fe cf       	rjmp	.-4      	; 0x208 <__DATA_REGION_LENGTH__+0x8>
+ 20c:	8a e0       	ldi	r24, 0x0A	; 10
+ 20e:	8a 95       	dec	r24
+ 210:	f1 f7       	brne	.-4      	; 0x20e <__DATA_REGION_LENGTH__+0xe>
+ 212:	00 c0       	rjmp	.+0      	; 0x214 <__DATA_REGION_LENGTH__+0x14>
+ 214:	8b e2       	ldi	r24, 0x2B	; 43
+ 216:	8d b9       	out	0x0d, r24	; 13
+ 218:	76 9b       	sbis	0x0e, 6	; 14
+ 21a:	f0 cf       	rjmp	.-32     	; 0x1fc <i2c_transfer+0x2>
+ 21c:	8d e0       	ldi	r24, 0x0D	; 13
+ 21e:	8a 95       	dec	r24
+ 220:	f1 f7       	brne	.-4      	; 0x21e <__DATA_REGION_LENGTH__+0x1e>
+ 222:	00 00       	nop
+ 224:	8f b1       	in	r24, 0x0f	; 15
+ 226:	9f ef       	ldi	r25, 0xFF	; 255
+ 228:	9f b9       	out	0x0f, r25	; 15
+ 22a:	97 b3       	in	r25, 0x17	; 23
+ 22c:	91 60       	ori	r25, 0x01	; 1
+ 22e:	97 bb       	out	0x17, r25	; 23
+ 230:	08 95       	ret
 
 Disassembly of section .text.i2c_init:
 
-00000164 <i2c_init>:
- 164:	88 b3       	in	r24, 0x18	; 24
- 166:	81 60       	ori	r24, 0x01	; 1
- 168:	88 bb       	out	0x18, r24	; 24
- 16a:	88 b3       	in	r24, 0x18	; 24
- 16c:	84 60       	ori	r24, 0x04	; 4
- 16e:	88 bb       	out	0x18, r24	; 24
- 170:	87 b3       	in	r24, 0x17	; 23
- 172:	84 60       	ori	r24, 0x04	; 4
- 174:	87 bb       	out	0x17, r24	; 23
- 176:	87 b3       	in	r24, 0x17	; 23
- 178:	81 60       	ori	r24, 0x01	; 1
- 17a:	87 bb       	out	0x17, r24	; 23
- 17c:	8f ef       	ldi	r24, 0xFF	; 255
- 17e:	8f b9       	out	0x0f, r24	; 15
- 180:	8a e2       	ldi	r24, 0x2A	; 42
- 182:	8d b9       	out	0x0d, r24	; 13
- 184:	80 ef       	ldi	r24, 0xF0	; 240
- 186:	8e b9       	out	0x0e, r24	; 14
- 188:	08 95       	ret
+00000288 <i2c_init>:
+ 288:	88 b3       	in	r24, 0x18	; 24
+ 28a:	81 60       	ori	r24, 0x01	; 1
+ 28c:	88 bb       	out	0x18, r24	; 24
+ 28e:	88 b3       	in	r24, 0x18	; 24
+ 290:	84 60       	ori	r24, 0x04	; 4
+ 292:	88 bb       	out	0x18, r24	; 24
+ 294:	87 b3       	in	r24, 0x17	; 23
+ 296:	84 60       	ori	r24, 0x04	; 4
+ 298:	87 bb       	out	0x17, r24	; 23
+ 29a:	87 b3       	in	r24, 0x17	; 23
+ 29c:	81 60       	ori	r24, 0x01	; 1
+ 29e:	87 bb       	out	0x17, r24	; 23
+ 2a0:	8f ef       	ldi	r24, 0xFF	; 255
+ 2a2:	8f b9       	out	0x0f, r24	; 15
+ 2a4:	8a e2       	ldi	r24, 0x2A	; 42
+ 2a6:	8d b9       	out	0x0d, r24	; 13
+ 2a8:	80 ef       	ldi	r24, 0xF0	; 240
+ 2aa:	8e b9       	out	0x0e, r24	; 14
+ 2ac:	08 95       	ret
 
 Disassembly of section .text.i2c_write:
 
-0000018a <i2c_write>:
- 18a:	98 b3       	in	r25, 0x18	; 24
- 18c:	9b 7f       	andi	r25, 0xFB	; 251
- 18e:	98 bb       	out	0x18, r25	; 24
- 190:	8f b9       	out	0x0f, r24	; 15
- 192:	80 ef       	ldi	r24, 0xF0	; 240
- 194:	d4 df       	rcall	.-88     	; 0x13e <i2c_transfer>
- 196:	87 b3       	in	r24, 0x17	; 23
- 198:	8e 7f       	andi	r24, 0xFE	; 254
- 19a:	87 bb       	out	0x17, r24	; 23
- 19c:	8e ef       	ldi	r24, 0xFE	; 254
- 19e:	cf df       	rcall	.-98     	; 0x13e <i2c_transfer>
- 1a0:	80 ff       	sbrs	r24, 0
- 1a2:	02 c0       	rjmp	.+4      	; 0x1a8 <i2c_write+0x1e>
- 1a4:	80 e0       	ldi	r24, 0x00	; 0
- 1a6:	08 95       	ret
- 1a8:	81 e0       	ldi	r24, 0x01	; 1
- 1aa:	08 95       	ret
+000002ae <i2c_write>:
+
+bool i2c_write (uint8_t data) {
+  /* Write a byte */
+  PORTB &= ~(1<<PIN_USI_SCL);                               // Pull SCL LOW.
+ 2ae:	98 b3       	in	r25, 0x18	; 24
+ 2b0:	9b 7f       	andi	r25, 0xFB	; 251
+ 2b2:	98 bb       	out	0x18, r25	; 24
+  USIDR = data;                                                   // Setup data.
+ 2b4:	8f b9       	out	0x0f, r24	; 15
+  i2c_transfer(USISR_8bit);                            // Send 8 bits on bus.
+ 2b6:	80 ef       	ldi	r24, 0xF0	; 240
+ 2b8:	a0 df       	rcall	.-192    	; 0x1fa <i2c_transfer>
+
+  /* Clock and verify (N)ACK from slave */
+  DDRB &= ~(1<<PIN_USI_SDA);                                   // Enable SDA as input.
+ 2ba:	87 b3       	in	r24, 0x17	; 23
+ 2bc:	8e 7f       	andi	r24, 0xFE	; 254
+ 2be:	87 bb       	out	0x17, r24	; 23
+  if (i2c_transfer(USISR_1bit) & 1<<TWI_NACK_BIT) return false;
+ 2c0:	8e ef       	ldi	r24, 0xFE	; 254
+ 2c2:	9b df       	rcall	.-202    	; 0x1fa <i2c_transfer>
+ 2c4:	80 ff       	sbrs	r24, 0
+ 2c6:	02 c0       	rjmp	.+4      	; 0x2cc <i2c_write+0x1e>
+ 2c8:	80 e0       	ldi	r24, 0x00	; 0
+ 2ca:	08 95       	ret
+
+  return true;                                                    // Write successfully completed
+ 2cc:	81 e0       	ldi	r24, 0x01	; 1
+}
+ 2ce:	08 95       	ret
 
 Disassembly of section .text.i2c_start:
 
-00000074 <i2c_start>:
-  74:	61 15       	cp	r22, r1
-  76:	71 05       	cpc	r23, r1
-  78:	31 f0       	breq	.+12     	; 0x86 <i2c_start+0x12>
-  7a:	70 93 61 00 	sts	0x0061, r23	; 0x800061 <_edata+0x1>
-  7e:	60 93 60 00 	sts	0x0060, r22	; 0x800060 <_edata>
-  82:	61 e0       	ldi	r22, 0x01	; 1
-  84:	70 e0       	ldi	r23, 0x00	; 0
-  86:	88 0f       	add	r24, r24
-  88:	68 2b       	or	r22, r24
-  8a:	88 b3       	in	r24, 0x18	; 24
-  8c:	84 60       	ori	r24, 0x04	; 4
-  8e:	88 bb       	out	0x18, r24	; 24
-  90:	b2 9b       	sbis	0x16, 2	; 22
-  92:	fe cf       	rjmp	.-4      	; 0x90 <i2c_start+0x1c>
-  94:	00 00       	nop
-  96:	88 b3       	in	r24, 0x18	; 24
-  98:	8e 7f       	andi	r24, 0xFE	; 254
-  9a:	88 bb       	out	0x18, r24	; 24
-  9c:	00 00       	nop
-  9e:	88 b3       	in	r24, 0x18	; 24
-  a0:	8b 7f       	andi	r24, 0xFB	; 251
-  a2:	88 bb       	out	0x18, r24	; 24
-  a4:	88 b3       	in	r24, 0x18	; 24
-  a6:	81 60       	ori	r24, 0x01	; 1
-  a8:	88 bb       	out	0x18, r24	; 24
-  aa:	77 9b       	sbis	0x0e, 7	; 14
-  ac:	0f c0       	rjmp	.+30     	; 0xcc <i2c_start+0x58>
-  ae:	88 b3       	in	r24, 0x18	; 24
-  b0:	8b 7f       	andi	r24, 0xFB	; 251
-  b2:	88 bb       	out	0x18, r24	; 24
-  b4:	6f b9       	out	0x0f, r22	; 15
-  b6:	80 ef       	ldi	r24, 0xF0	; 240
-  b8:	42 d0       	rcall	.+132    	; 0x13e <i2c_transfer>
-  ba:	87 b3       	in	r24, 0x17	; 23
-  bc:	8e 7f       	andi	r24, 0xFE	; 254
-  be:	87 bb       	out	0x17, r24	; 23
-  c0:	8e ef       	ldi	r24, 0xFE	; 254
-  c2:	3d d0       	rcall	.+122    	; 0x13e <i2c_transfer>
-  c4:	80 ff       	sbrs	r24, 0
-  c6:	04 c0       	rjmp	.+8      	; 0xd0 <i2c_start+0x5c>
-  c8:	80 e0       	ldi	r24, 0x00	; 0
-  ca:	08 95       	ret
-  cc:	80 e0       	ldi	r24, 0x00	; 0
-  ce:	08 95       	ret
-  d0:	81 e0       	ldi	r24, 0x01	; 1
-  d2:	08 95       	ret
+00000154 <i2c_start>:
+}
+
+uint8_t i2c_readLast (void) {
+  I2Ccount = 0;
+  return i2c_read();
+}
+ 154:	61 15       	cp	r22, r1
+ 156:	71 05       	cpc	r23, r1
+ 158:	31 f0       	breq	.+12     	; 0x166 <i2c_start+0x12>
+ 15a:	70 93 61 00 	sts	0x0061, r23	; 0x800061 <_edata+0x1>
+ 15e:	60 93 60 00 	sts	0x0060, r22	; 0x800060 <_edata>
+ 162:	61 e0       	ldi	r22, 0x01	; 1
+ 164:	70 e0       	ldi	r23, 0x00	; 0
+ 166:	88 0f       	add	r24, r24
+ 168:	68 2b       	or	r22, r24
+ 16a:	88 b3       	in	r24, 0x18	; 24
+ 16c:	84 60       	ori	r24, 0x04	; 4
+ 16e:	88 bb       	out	0x18, r24	; 24
+ 170:	b2 9b       	sbis	0x16, 2	; 22
+ 172:	fe cf       	rjmp	.-4      	; 0x170 <i2c_start+0x1c>
+ 174:	8d e0       	ldi	r24, 0x0D	; 13
+ 176:	8a 95       	dec	r24
+ 178:	f1 f7       	brne	.-4      	; 0x176 <i2c_start+0x22>
+ 17a:	00 00       	nop
+ 17c:	88 b3       	in	r24, 0x18	; 24
+ 17e:	8e 7f       	andi	r24, 0xFE	; 254
+ 180:	88 bb       	out	0x18, r24	; 24
+ 182:	8a e0       	ldi	r24, 0x0A	; 10
+ 184:	8a 95       	dec	r24
+ 186:	f1 f7       	brne	.-4      	; 0x184 <i2c_start+0x30>
+ 188:	00 c0       	rjmp	.+0      	; 0x18a <i2c_start+0x36>
+ 18a:	88 b3       	in	r24, 0x18	; 24
+ 18c:	8b 7f       	andi	r24, 0xFB	; 251
+ 18e:	88 bb       	out	0x18, r24	; 24
+ 190:	88 b3       	in	r24, 0x18	; 24
+ 192:	81 60       	ori	r24, 0x01	; 1
+ 194:	88 bb       	out	0x18, r24	; 24
+ 196:	77 9b       	sbis	0x0e, 7	; 14
+ 198:	0f c0       	rjmp	.+30     	; 0x1b8 <i2c_start+0x64>
+ 19a:	88 b3       	in	r24, 0x18	; 24
+ 19c:	8b 7f       	andi	r24, 0xFB	; 251
+ 19e:	88 bb       	out	0x18, r24	; 24
+ 1a0:	6f b9       	out	0x0f, r22	; 15
+ 1a2:	80 ef       	ldi	r24, 0xF0	; 240
+ 1a4:	2a d0       	rcall	.+84     	; 0x1fa <i2c_transfer>
+ 1a6:	87 b3       	in	r24, 0x17	; 23
+ 1a8:	8e 7f       	andi	r24, 0xFE	; 254
+ 1aa:	87 bb       	out	0x17, r24	; 23
+ 1ac:	8e ef       	ldi	r24, 0xFE	; 254
+ 1ae:	25 d0       	rcall	.+74     	; 0x1fa <i2c_transfer>
+ 1b0:	80 ff       	sbrs	r24, 0
+ 1b2:	04 c0       	rjmp	.+8      	; 0x1bc <i2c_start+0x68>
+ 1b4:	80 e0       	ldi	r24, 0x00	; 0
+ 1b6:	08 95       	ret
+ 1b8:	80 e0       	ldi	r24, 0x00	; 0
+ 1ba:	08 95       	ret
+ 1bc:	81 e0       	ldi	r24, 0x01	; 1
+ 1be:	08 95       	ret
 
 Disassembly of section .text.i2c_stop:
 
-000001ac <i2c_stop>:
-
-void i2c_stop (void) {
-  PORTB &= ~(1<<PIN_USI_SDA);                                  // Pull SDA low.
- 1ac:	88 b3       	in	r24, 0x18	; 24
- 1ae:	8e 7f       	andi	r24, 0xFE	; 254
- 1b0:	88 bb       	out	0x18, r24	; 24
-  PORTB |= 1<<PIN_USI_SCL;                                  // Release SCL.
- 1b2:	88 b3       	in	r24, 0x18	; 24
- 1b4:	84 60       	ori	r24, 0x04	; 4
- 1b6:	88 bb       	out	0x18, r24	; 24
-  while (!(PIN_USI_CL & 1<<PIN_USI_SCL));                         // Wait for SCL to go high.
- 1b8:	b2 9b       	sbis	0x16, 2	; 22
- 1ba:	fe cf       	rjmp	.-4      	; 0x1b8 <i2c_stop+0xc>
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
-
-	__builtin_avr_delay_cycles(__ticks_dc);
- 1bc:	00 00       	nop
-  DELAY_T4TWI;
-  PORTB |= 1<<PIN_USI_SDA;                                     // Release SDA.
- 1be:	88 b3       	in	r24, 0x18	; 24
- 1c0:	81 60       	ori	r24, 0x01	; 1
- 1c2:	88 bb       	out	0x18, r24	; 24
- 1c4:	00 c0       	rjmp	.+0      	; 0x1c6 <i2c_stop+0x1a>
- 1c6:	08 95       	ret
+00000260 <i2c_stop>:
+ 260:	88 b3       	in	r24, 0x18	; 24
+ 262:	8e 7f       	andi	r24, 0xFE	; 254
+ 264:	88 bb       	out	0x18, r24	; 24
+ 266:	88 b3       	in	r24, 0x18	; 24
+ 268:	84 60       	ori	r24, 0x04	; 4
+ 26a:	88 bb       	out	0x18, r24	; 24
+ 26c:	b2 9b       	sbis	0x16, 2	; 22
+ 26e:	fe cf       	rjmp	.-4      	; 0x26c <i2c_stop+0xc>
+ 270:	8a e0       	ldi	r24, 0x0A	; 10
+ 272:	8a 95       	dec	r24
+ 274:	f1 f7       	brne	.-4      	; 0x272 <i2c_stop+0x12>
+ 276:	00 c0       	rjmp	.+0      	; 0x278 <i2c_stop+0x18>
+ 278:	88 b3       	in	r24, 0x18	; 24
+ 27a:	81 60       	ori	r24, 0x01	; 1
+ 27c:	88 bb       	out	0x18, r24	; 24
+ 27e:	8d e0       	ldi	r24, 0x0D	; 13
+ 280:	8a 95       	dec	r24
+ 282:	f1 f7       	brne	.-4      	; 0x280 <i2c_stop+0x20>
+ 284:	00 00       	nop
+ 286:	08 95       	ret
 
 Disassembly of section .text.timer1_init:
 
-000001c8 <timer1_init>:
+000002ea <timer1_init>:
 
 
 
 /* Set ut timer1 to toggle every 500ms and output on PB1 */
 void timer1_init(void) {
 	MCUCR &= ~(1 << PUD);
- 1c8:	85 b7       	in	r24, 0x35	; 53
- 1ca:	8f 7b       	andi	r24, 0xBF	; 191
- 1cc:	85 bf       	out	0x35, r24	; 53
+ 2ea:	85 b7       	in	r24, 0x35	; 53
+ 2ec:	8f 7b       	andi	r24, 0xBF	; 191
+ 2ee:	85 bf       	out	0x35, r24	; 53
 
 	// Clear on Compare | Toggle OC1A on compare | PCK/16384 (64 ticks/s)
 	TCCR1 |= (1 << CTC1) | (1 << COM1A0) | (1 << CS13) | (1 << CS12) | (1 << CS11) | (1 << CS10);
- 1ce:	80 b7       	in	r24, 0x30	; 48
- 1d0:	8f 69       	ori	r24, 0x9F	; 159
- 1d2:	80 bf       	out	0x30, r24	; 48
+ 2f0:	80 b7       	in	r24, 0x30	; 48
+ 2f2:	8f 69       	ori	r24, 0x9F	; 159
+ 2f4:	80 bf       	out	0x30, r24	; 48
 
 	OCR1A = 0xFF;
- 1d4:	8f ef       	ldi	r24, 0xFF	; 255
- 1d6:	8e bd       	out	0x2e, r24	; 46
+ 2f6:	8f ef       	ldi	r24, 0xFF	; 255
+ 2f8:	8e bd       	out	0x2e, r24	; 46
 
 	DDRB |= (1 << PB1);
- 1d8:	87 b3       	in	r24, 0x17	; 23
- 1da:	82 60       	ori	r24, 0x02	; 2
- 1dc:	87 bb       	out	0x17, r24	; 23
- 1de:	08 95       	ret
+ 2fa:	87 b3       	in	r24, 0x17	; 23
+ 2fc:	82 60       	ori	r24, 0x02	; 2
+ 2fe:	87 bb       	out	0x17, r24	; 23
+ 300:	08 95       	ret
 
 Disassembly of section .text.timer0_init:
 
-000001f6 <timer0_init>:
+00000318 <timer0_init>:
 }
 
 void timer0_init(void) {
 	// Output on compare : off | WGM : off
 	TCCR0A = 0;
- 1f6:	1a bc       	out	0x2a, r1	; 42
+ 318:	1a bc       	out	0x2a, r1	; 42
 
 	// Clock select prescaler : clk/1024 = 7812
 	TCCR0B |=   (1 << CS02) |
- 1f8:	83 b7       	in	r24, 0x33	; 51
- 1fa:	85 60       	ori	r24, 0x05	; 5
- 1fc:	83 bf       	out	0x33, r24	; 51
+ 31a:	83 b7       	in	r24, 0x33	; 51
+ 31c:	85 60       	ori	r24, 0x05	; 5
+ 31e:	83 bf       	out	0x33, r24	; 51
 	(0 << CS01) |
 	(1 << CS00);
 
 	TCNT0=0;
- 1fe:	12 be       	out	0x32, r1	; 50
+ 320:	12 be       	out	0x32, r1	; 50
 
 	// Compre A register
 	OCR0A = 0xFE;
- 200:	8e ef       	ldi	r24, 0xFE	; 254
- 202:	89 bd       	out	0x29, r24	; 41
- 204:	08 95       	ret
+ 322:	8e ef       	ldi	r24, 0xFE	; 254
+ 324:	89 bd       	out	0x29, r24	; 41
+ 326:	08 95       	ret
 
 Disassembly of section .text.adc1_init:
 
-000001e0 <adc1_init>:
+00000302 <adc1_init>:
 }
 
 /* Set up ADC2 as input for PB4, Vref = Vcc */
 void adc1_init()
 {
 	timer0_init();
- 1e0:	0a d0       	rcall	.+20     	; 0x1f6 <timer0_init>
+ 302:	0a d0       	rcall	.+20     	; 0x318 <timer0_init>
 	// Voltage ref = Vcc |Left adjust | Mux = 0x02, input adc1 = PB4.
 	ADMUX |=    (1 << ADLAR) |
- 1e2:	87 b1       	in	r24, 0x07	; 7
- 1e4:	82 62       	ori	r24, 0x22	; 34
- 1e6:	87 b9       	out	0x07, r24	; 7
+ 304:	87 b1       	in	r24, 0x07	; 7
+ 306:	82 62       	ori	r24, 0x22	; 34
+ 308:	87 b9       	out	0x07, r24	; 7
 	(0 << MUX0)  |
 	(1 << MUX1) ;
 
 	// Autotrigger on Timer0 OVF | Digital input disable for ADC2
 	ADCSRB |=   (1 << ADTS2) |
- 1e8:	83 b1       	in	r24, 0x03	; 3
- 1ea:	84 61       	ori	r24, 0x14	; 20
- 1ec:	83 b9       	out	0x03, r24	; 3
+ 30a:	83 b1       	in	r24, 0x03	; 3
+ 30c:	84 61       	ori	r24, 0x14	; 20
+ 30e:	83 b9       	out	0x03, r24	; 3
 	(0 << ADTS1) |
 	(0 << ADTS0) |
 	(1 << ADC2D);
 
 	// Enable adc adc | Enable auto trigger |prescaler = 64 | Interrupt enable | Enable start conversion
 	ADCSRA |=   (1 << ADEN) |
- 1ee:	86 b1       	in	r24, 0x06	; 6
- 1f0:	8e 6e       	ori	r24, 0xEE	; 238
- 1f2:	86 b9       	out	0x06, r24	; 6
- 1f4:	08 95       	ret
+ 310:	86 b1       	in	r24, 0x06	; 6
+ 312:	8e 6e       	ori	r24, 0xEE	; 238
+ 314:	86 b9       	out	0x06, r24	; 6
+ 316:	08 95       	ret
 
 Disassembly of section .text.__vector_8:
 
-00000110 <__vector_8>:
+00000232 <__vector_8>:
 
 uint8_t counter = 0;
 uint8_t adcVal = 0;
 
 ISR(ADC_vect)
 {
- 110:	1f 92       	push	r1
- 112:	0f 92       	push	r0
- 114:	0f b6       	in	r0, 0x3f	; 63
- 116:	0f 92       	push	r0
- 118:	11 24       	eor	r1, r1
- 11a:	8f 93       	push	r24
+ 232:	1f 92       	push	r1
+ 234:	0f 92       	push	r0
+ 236:	0f b6       	in	r0, 0x3f	; 63
+ 238:	0f 92       	push	r0
+ 23a:	11 24       	eor	r1, r1
+ 23c:	8f 93       	push	r24
 	counter++;
- 11c:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
- 120:	8f 5f       	subi	r24, 0xFF	; 255
- 122:	80 93 63 00 	sts	0x0063, r24	; 0x800063 <counter>
+ 23e:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
+ 242:	8f 5f       	subi	r24, 0xFF	; 255
+ 244:	80 93 63 00 	sts	0x0063, r24	; 0x800063 <counter>
 	adcVal = ADCH;
- 126:	85 b1       	in	r24, 0x05	; 5
- 128:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <_end>
+ 248:	85 b1       	in	r24, 0x05	; 5
+ 24a:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <_end>
 	TIFR |= (1 << TOV0); // Clear timer0 OVF
- 12c:	88 b7       	in	r24, 0x38	; 56
- 12e:	82 60       	ori	r24, 0x02	; 2
- 130:	88 bf       	out	0x38, r24	; 56
+ 24e:	88 b7       	in	r24, 0x38	; 56
+ 250:	82 60       	ori	r24, 0x02	; 2
+ 252:	88 bf       	out	0x38, r24	; 56
 }
- 132:	8f 91       	pop	r24
- 134:	0f 90       	pop	r0
- 136:	0f be       	out	0x3f, r0	; 63
- 138:	0f 90       	pop	r0
- 13a:	1f 90       	pop	r1
- 13c:	18 95       	reti
+ 254:	8f 91       	pop	r24
+ 256:	0f 90       	pop	r0
+ 258:	0f be       	out	0x3f, r0	; 63
+ 25a:	0f 90       	pop	r0
+ 25c:	1f 90       	pop	r1
+ 25e:	18 95       	reti
 
 Disassembly of section .text.main:
 
-000000d4 <main>:
+000000e6 <main>:
 
 int main()
 {
 	i2c_init();
-  d4:	47 d0       	rcall	.+142    	; 0x164 <i2c_init>
+  e6:	d0 d0       	rcall	.+416    	; 0x288 <i2c_init>
+	OLED_init();
+  e8:	c5 df       	rcall	.-118    	; 0x74 <_etext>
 	timer1_init();
-  d6:	78 d0       	rcall	.+240    	; 0x1c8 <timer1_init>
+  ea:	ff d0       	rcall	.+510    	; 0x2ea <timer1_init>
 	adc1_init();
-  d8:	83 d0       	rcall	.+262    	; 0x1e0 <adc1_init>
+  ec:	0a d1       	rcall	.+532    	; 0x302 <adc1_init>
 	sei();
-  da:	78 94       	sei
+  ee:	78 94       	sei
 
 	DDRB |= (1 << PB3); // Set PB3 as output
-  dc:	87 b3       	in	r24, 0x17	; 23
-  de:	88 60       	ori	r24, 0x08	; 8
-  e0:	87 bb       	out	0x17, r24	; 23
+  f0:	87 b3       	in	r24, 0x17	; 23
+  f2:	88 60       	ori	r24, 0x08	; 8
+  f4:	87 bb       	out	0x17, r24	; 23
 	PINB |= (1 << PB3);
-  e2:	86 b3       	in	r24, 0x16	; 22
-  e4:	88 60       	ori	r24, 0x08	; 8
-  e6:	86 bb       	out	0x16, r24	; 22
+  f6:	86 b3       	in	r24, 0x16	; 22
+  f8:	88 60       	ori	r24, 0x08	; 8
+  fa:	86 bb       	out	0x16, r24	; 22
+	
+	
+	i2c_start(ADDRS, 0);
+  fc:	60 e0       	ldi	r22, 0x00	; 0
+  fe:	70 e0       	ldi	r23, 0x00	; 0
+ 100:	80 e2       	ldi	r24, 0x20	; 32
+ 102:	28 d0       	rcall	.+80     	; 0x154 <i2c_start>
+	i2c_write(MCP23008_REG_ADDR_IODIR);
+ 104:	80 e0       	ldi	r24, 0x00	; 0
+ 106:	d3 d0       	rcall	.+422    	; 0x2ae <i2c_write>
+	i2c_write(0x00);
+ 108:	80 e0       	ldi	r24, 0x00	; 0
+ 10a:	d1 d0       	rcall	.+418    	; 0x2ae <i2c_write>
+	i2c_stop();
+ 10c:	a9 d0       	rcall	.+338    	; 0x260 <i2c_stop>
 	while(1)
 	{
 		// ADCSRA |= (1 << ADSC); // Start conversion
 		// while(ADCSRA & (1 << ADSC)); // Conversion complete
 
 		if (adcVal > 128) {
-  e8:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <_end>
-  ec:	81 38       	cpi	r24, 0x81	; 129
-  ee:	60 f0       	brcs	.+24     	; 0x108 <main+0x34>
-			PORTB |= (1 << PB3); // Set PB3 as output
-  f0:	88 b3       	in	r24, 0x18	; 24
-  f2:	88 60       	ori	r24, 0x08	; 8
-  f4:	88 bb       	out	0x18, r24	; 24
+ 10e:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <_end>
+ 112:	81 38       	cpi	r24, 0x81	; 129
+ 114:	80 f0       	brcs	.+32     	; 0x136 <main+0x50>
+			PORTB |= (1 << PB3); // Set PB3 high
+ 116:	88 b3       	in	r24, 0x18	; 24
+ 118:	88 60       	ori	r24, 0x08	; 8
+ 11a:	88 bb       	out	0x18, r24	; 24
 			i2c_start(ADDRS, 0);
-  f6:	60 e0       	ldi	r22, 0x00	; 0
-  f8:	70 e0       	ldi	r23, 0x00	; 0
-  fa:	80 e2       	ldi	r24, 0x20	; 32
-  fc:	bb df       	rcall	.-138    	; 0x74 <_etext>
+ 11c:	60 e0       	ldi	r22, 0x00	; 0
+ 11e:	70 e0       	ldi	r23, 0x00	; 0
+ 120:	80 e2       	ldi	r24, 0x20	; 32
+ 122:	18 d0       	rcall	.+48     	; 0x154 <i2c_start>
+			i2c_write(MCP23008_REG_ADDR_GPIO);
+ 124:	89 e0       	ldi	r24, 0x09	; 9
+ 126:	c3 d0       	rcall	.+390    	; 0x2ae <i2c_write>
 			i2c_write(counter);
-  fe:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
- 102:	43 d0       	rcall	.+134    	; 0x18a <i2c_write>
+ 128:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
+ 12c:	c0 d0       	rcall	.+384    	; 0x2ae <i2c_write>
 			i2c_stop();
- 104:	53 d0       	rcall	.+166    	; 0x1ac <i2c_stop>
- 106:	f0 cf       	rjmp	.-32     	; 0xe8 <main+0x14>
+ 12e:	98 d0       	rcall	.+304    	; 0x260 <i2c_stop>
+			
+			OLED_fillscreen(0x00);
+ 130:	80 e0       	ldi	r24, 0x00	; 0
+ 132:	46 d0       	rcall	.+140    	; 0x1c0 <OLED_fillscreen>
+ 134:	05 c0       	rjmp	.+10     	; 0x140 <main+0x5a>
 		}
 		else{
-			PORTB &= ~(1 << PB3);
- 108:	88 b3       	in	r24, 0x18	; 24
- 10a:	87 7f       	andi	r24, 0xF7	; 247
- 10c:	88 bb       	out	0x18, r24	; 24
- 10e:	ec cf       	rjmp	.-40     	; 0xe8 <main+0x14>
+			PORTB &= ~(1 << PB3);	// Set PB3 low
+ 136:	88 b3       	in	r24, 0x18	; 24
+ 138:	87 7f       	andi	r24, 0xF7	; 247
+ 13a:	88 bb       	out	0x18, r24	; 24
+			OLED_fillscreen(0xFF);
+ 13c:	8f ef       	ldi	r24, 0xFF	; 255
+ 13e:	40 d0       	rcall	.+128    	; 0x1c0 <OLED_fillscreen>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 140:	2f e7       	ldi	r18, 0x7F	; 127
+ 142:	88 e3       	ldi	r24, 0x38	; 56
+ 144:	91 e0       	ldi	r25, 0x01	; 1
+ 146:	21 50       	subi	r18, 0x01	; 1
+ 148:	80 40       	sbci	r24, 0x00	; 0
+ 14a:	90 40       	sbci	r25, 0x00	; 0
+ 14c:	e1 f7       	brne	.-8      	; 0x146 <main+0x60>
+ 14e:	00 c0       	rjmp	.+0      	; 0x150 <main+0x6a>
+ 150:	00 00       	nop
+ 152:	dd cf       	rjmp	.-70     	; 0x10e <main+0x28>
+
+Disassembly of section .text.OLED_send_byte:
+
+00000344 <OLED_send_byte>:
+	OLED_send_command(0xAF); // --turn on oled panel
+}
+
+
+void OLED_send_byte(uint8_t byte) {
+	i2c_write(byte);
+ 344:	b4 df       	rcall	.-152    	; 0x2ae <i2c_write>
+ 346:	08 95       	ret
+
+Disassembly of section .text.OLED_send_command:
+
+000002d0 <OLED_send_command>:
+}
+
+void OLED_send_command(uint8_t command) {
+ 2d0:	cf 93       	push	r28
+ 2d2:	c8 2f       	mov	r28, r24
+	i2c_start(OLED_ADDRESS,0);			
+ 2d4:	60 e0       	ldi	r22, 0x00	; 0
+ 2d6:	70 e0       	ldi	r23, 0x00	; 0
+ 2d8:	8c e3       	ldi	r24, 0x3C	; 60
+ 2da:	3c df       	rcall	.-392    	; 0x154 <i2c_start>
+	i2c_write(0x00);					// write command
+ 2dc:	80 e0       	ldi	r24, 0x00	; 0
+ 2de:	e7 df       	rcall	.-50     	; 0x2ae <i2c_write>
+	i2c_write(command);
+ 2e0:	8c 2f       	mov	r24, r28
+ 2e2:	e5 df       	rcall	.-54     	; 0x2ae <i2c_write>
+	i2c_stop();
+ 2e4:	bd df       	rcall	.-134    	; 0x260 <i2c_stop>
+}
+ 2e6:	cf 91       	pop	r28
+ 2e8:	08 95       	ret
+
+Disassembly of section .text.OLED_init:
+
+00000074 <OLED_init>:
+	OLED_send_byte(0xb0 + y);
+	OLED_send_byte(((x & 0xf0) >> 4) | 0x10); // |0x10
+	OLED_send_byte((x & 0x0f) | 0x01); // |0x01
+
+	OLED_send_data_stop();
+}
+  74:	8e ea       	ldi	r24, 0xAE	; 174
+  76:	2c d1       	rcall	.+600    	; 0x2d0 <OLED_send_command>
+  78:	80 e0       	ldi	r24, 0x00	; 0
+  7a:	2a d1       	rcall	.+596    	; 0x2d0 <OLED_send_command>
+  7c:	80 e1       	ldi	r24, 0x10	; 16
+  7e:	28 d1       	rcall	.+592    	; 0x2d0 <OLED_send_command>
+  80:	80 e4       	ldi	r24, 0x40	; 64
+  82:	26 d1       	rcall	.+588    	; 0x2d0 <OLED_send_command>
+  84:	81 e8       	ldi	r24, 0x81	; 129
+  86:	24 d1       	rcall	.+584    	; 0x2d0 <OLED_send_command>
+  88:	8f ec       	ldi	r24, 0xCF	; 207
+  8a:	22 d1       	rcall	.+580    	; 0x2d0 <OLED_send_command>
+  8c:	81 ea       	ldi	r24, 0xA1	; 161
+  8e:	20 d1       	rcall	.+576    	; 0x2d0 <OLED_send_command>
+  90:	88 ec       	ldi	r24, 0xC8	; 200
+  92:	1e d1       	rcall	.+572    	; 0x2d0 <OLED_send_command>
+  94:	86 ea       	ldi	r24, 0xA6	; 166
+  96:	1c d1       	rcall	.+568    	; 0x2d0 <OLED_send_command>
+  98:	88 ea       	ldi	r24, 0xA8	; 168
+  9a:	1a d1       	rcall	.+564    	; 0x2d0 <OLED_send_command>
+  9c:	8f e3       	ldi	r24, 0x3F	; 63
+  9e:	18 d1       	rcall	.+560    	; 0x2d0 <OLED_send_command>
+  a0:	83 ed       	ldi	r24, 0xD3	; 211
+  a2:	16 d1       	rcall	.+556    	; 0x2d0 <OLED_send_command>
+  a4:	80 e0       	ldi	r24, 0x00	; 0
+  a6:	14 d1       	rcall	.+552    	; 0x2d0 <OLED_send_command>
+  a8:	85 ed       	ldi	r24, 0xD5	; 213
+  aa:	12 d1       	rcall	.+548    	; 0x2d0 <OLED_send_command>
+  ac:	80 e8       	ldi	r24, 0x80	; 128
+  ae:	10 d1       	rcall	.+544    	; 0x2d0 <OLED_send_command>
+  b0:	89 ed       	ldi	r24, 0xD9	; 217
+  b2:	0e d1       	rcall	.+540    	; 0x2d0 <OLED_send_command>
+  b4:	81 ef       	ldi	r24, 0xF1	; 241
+  b6:	0c d1       	rcall	.+536    	; 0x2d0 <OLED_send_command>
+  b8:	8a ed       	ldi	r24, 0xDA	; 218
+  ba:	0a d1       	rcall	.+532    	; 0x2d0 <OLED_send_command>
+  bc:	82 e1       	ldi	r24, 0x12	; 18
+  be:	08 d1       	rcall	.+528    	; 0x2d0 <OLED_send_command>
+  c0:	8b ed       	ldi	r24, 0xDB	; 219
+  c2:	06 d1       	rcall	.+524    	; 0x2d0 <OLED_send_command>
+  c4:	80 e4       	ldi	r24, 0x40	; 64
+  c6:	04 d1       	rcall	.+520    	; 0x2d0 <OLED_send_command>
+  c8:	80 e2       	ldi	r24, 0x20	; 32
+  ca:	02 d1       	rcall	.+516    	; 0x2d0 <OLED_send_command>
+  cc:	82 e0       	ldi	r24, 0x02	; 2
+  ce:	00 d1       	rcall	.+512    	; 0x2d0 <OLED_send_command>
+  d0:	8d e8       	ldi	r24, 0x8D	; 141
+  d2:	fe d0       	rcall	.+508    	; 0x2d0 <OLED_send_command>
+  d4:	84 e1       	ldi	r24, 0x14	; 20
+  d6:	fc d0       	rcall	.+504    	; 0x2d0 <OLED_send_command>
+  d8:	84 ea       	ldi	r24, 0xA4	; 164
+  da:	fa d0       	rcall	.+500    	; 0x2d0 <OLED_send_command>
+  dc:	86 ea       	ldi	r24, 0xA6	; 166
+  de:	f8 d0       	rcall	.+496    	; 0x2d0 <OLED_send_command>
+  e0:	8f ea       	ldi	r24, 0xAF	; 175
+  e2:	f6 d0       	rcall	.+492    	; 0x2d0 <OLED_send_command>
+  e4:	08 95       	ret
+
+Disassembly of section .text.OLED_send_data_start:
+
+00000328 <OLED_send_data_start>:
+	i2c_write(command);
+	i2c_stop();
+}
+
+void OLED_send_data_start(void) {
+	i2c_start(OLED_ADDRESS,0);
+ 328:	60 e0       	ldi	r22, 0x00	; 0
+ 32a:	70 e0       	ldi	r23, 0x00	; 0
+ 32c:	8c e3       	ldi	r24, 0x3C	; 60
+ 32e:	12 df       	rcall	.-476    	; 0x154 <i2c_start>
+	i2c_write(0x40);					// write data
+ 330:	80 e4       	ldi	r24, 0x40	; 64
+ 332:	bd df       	rcall	.-134    	; 0x2ae <i2c_write>
+ 334:	08 95       	ret
+
+Disassembly of section .text.OLED_send_data_stop:
+
+00000348 <OLED_send_data_stop>:
+}
+
+void OLED_send_data_stop(void) {
+	i2c_stop();
+ 348:	8b df       	rcall	.-234    	; 0x260 <i2c_stop>
+ 34a:	08 95       	ret
+
+Disassembly of section .text.OLED_fillscreen:
+
+000001c0 <OLED_fillscreen>:
+	OLED_send_byte((x & 0x0f) | 0x01); // |0x01
+
+	OLED_send_data_stop();
+}
+
+void OLED_fillscreen(uint8_t fill_Data) {
+ 1c0:	1f 93       	push	r17
+ 1c2:	cf 93       	push	r28
+ 1c4:	df 93       	push	r29
+ 1c6:	d8 2f       	mov	r29, r24
+	uint8_t m, n;
+	for (m = 0; m < 8; m++)
+ 1c8:	10 e0       	ldi	r17, 0x00	; 0
+ 1ca:	11 c0       	rjmp	.+34     	; 0x1ee <OLED_fillscreen+0x2e>
+	{
+		OLED_send_command(0xb0 + m); //page0-page1
+ 1cc:	80 eb       	ldi	r24, 0xB0	; 176
+ 1ce:	81 0f       	add	r24, r17
+ 1d0:	7f d0       	rcall	.+254    	; 0x2d0 <OLED_send_command>
+		OLED_send_command(0x00);   //low rowumn start address
+ 1d2:	80 e0       	ldi	r24, 0x00	; 0
+ 1d4:	7d d0       	rcall	.+250    	; 0x2d0 <OLED_send_command>
+		OLED_send_command(0x10);   //high rowumn start address
+ 1d6:	80 e1       	ldi	r24, 0x10	; 16
+ 1d8:	7b d0       	rcall	.+246    	; 0x2d0 <OLED_send_command>
+		OLED_send_data_start();
+ 1da:	a6 d0       	rcall	.+332    	; 0x328 <OLED_send_data_start>
+		for (n = 0; n < 128; n++)
+ 1dc:	c0 e0       	ldi	r28, 0x00	; 0
+ 1de:	03 c0       	rjmp	.+6      	; 0x1e6 <OLED_fillscreen+0x26>
+		{
+			OLED_send_byte(fill_Data);
+ 1e0:	8d 2f       	mov	r24, r29
+ 1e2:	b0 d0       	rcall	.+352    	; 0x344 <OLED_send_byte>
+	{
+		OLED_send_command(0xb0 + m); //page0-page1
+		OLED_send_command(0x00);   //low rowumn start address
+		OLED_send_command(0x10);   //high rowumn start address
+		OLED_send_data_start();
+		for (n = 0; n < 128; n++)
+ 1e4:	cf 5f       	subi	r28, 0xFF	; 255
+ 1e6:	cc 23       	and	r28, r28
+ 1e8:	dc f7       	brge	.-10     	; 0x1e0 <OLED_fillscreen+0x20>
+		{
+			OLED_send_byte(fill_Data);
+		}
+		OLED_send_data_stop();
+ 1ea:	ae d0       	rcall	.+348    	; 0x348 <OLED_send_data_stop>
+	OLED_send_data_stop();
+}
+
+void OLED_fillscreen(uint8_t fill_Data) {
+	uint8_t m, n;
+	for (m = 0; m < 8; m++)
+ 1ec:	1f 5f       	subi	r17, 0xFF	; 255
+ 1ee:	18 30       	cpi	r17, 0x08	; 8
+ 1f0:	68 f3       	brcs	.-38     	; 0x1cc <OLED_fillscreen+0xc>
+		{
+			OLED_send_byte(fill_Data);
+		}
+		OLED_send_data_stop();
+	}
+}
+ 1f2:	df 91       	pop	r29
+ 1f4:	cf 91       	pop	r28
+ 1f6:	1f 91       	pop	r17
+ 1f8:	08 95       	ret
 
 Disassembly of section .text.__dummy_fini:
 
-00000216 <_fini>:
- 216:	08 95       	ret
+0000034e <_fini>:
+ 34e:	08 95       	ret
 
 Disassembly of section .text.__dummy_funcs_on_exit:
 
-00000218 <__funcs_on_exit>:
- 218:	08 95       	ret
+00000350 <__funcs_on_exit>:
+ 350:	08 95       	ret
 
 Disassembly of section .text.__dummy_simulator_exit:
 
-0000021a <__simulator_exit>:
- 21a:	08 95       	ret
+00000352 <__simulator_exit>:
+ 352:	08 95       	ret
 
 Disassembly of section .text.exit:
 
-00000206 <exit>:
- 206:	ec 01       	movw	r28, r24
- 208:	07 d0       	rcall	.+14     	; 0x218 <__funcs_on_exit>
- 20a:	05 d0       	rcall	.+10     	; 0x216 <_fini>
- 20c:	ce 01       	movw	r24, r28
- 20e:	05 d0       	rcall	.+10     	; 0x21a <__simulator_exit>
- 210:	ce 01       	movw	r24, r28
- 212:	04 d0       	rcall	.+8      	; 0x21c <_Exit>
+00000336 <exit>:
+ 336:	ec 01       	movw	r28, r24
+ 338:	0b d0       	rcall	.+22     	; 0x350 <__funcs_on_exit>
+ 33a:	09 d0       	rcall	.+18     	; 0x34e <_fini>
+ 33c:	ce 01       	movw	r24, r28
+ 33e:	09 d0       	rcall	.+18     	; 0x352 <__simulator_exit>
+ 340:	ce 01       	movw	r24, r28
+ 342:	08 d0       	rcall	.+16     	; 0x354 <_Exit>
 
 Disassembly of section .text._Exit:
 
-0000021c <_Exit>:
- 21c:	29 df       	rcall	.-430    	; 0x70 <_exit>
+00000354 <_Exit>:
+ 354:	8d de       	rcall	.-742    	; 0x70 <_exit>

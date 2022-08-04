@@ -9,7 +9,10 @@
 #ifndef I2C_H_
 #define I2C_H_
 
+
 #include <stdbool.h>
+#include <stdint.h>
+#include <xc.h>
 
 #define PIN_USI_SCL		PB2
 #define PIN_USI_SDA		PB0

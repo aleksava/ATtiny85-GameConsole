@@ -5,12 +5,22 @@
  *  Author: aleks
  */ 
 
+#ifndef F_CPU
+#define F_CPU 8000000UL
+#endif
+
 #include <xc.h>
+
+#include <stdbool.h>
+#include <stdint.h>
+
 #include "avr/io.h"
 #include "avr/interrupt.h"
 #include "avr/pgmspace.h"
+#include "util/delay.h"
 
 #include "i2c.h"
+#include "OLED.h"
 
 // F_CPU = 8 MHz
 
@@ -70,10 +80,6 @@ void adc1_init()
 
 }
 
-#define ADDRS 0x20
-#define MCP23008_REG_ADDR_IODIR 0x00
-#define MCP23008_REG_ADDR_GPIO 0x09
-
 
 uint8_t counter = 0;
 uint8_t adcVal = 0;
@@ -88,6 +94,7 @@ ISR(ADC_vect)
 int main()
 {
 	i2c_init();
+	OLED_init();
 	timer1_init();
 	adc1_init();
 	sei();
@@ -96,10 +103,8 @@ int main()
 	PINB |= (1 << PB3);
 	
 	
-	i2c_start(ADDRS, 0);
-	i2c_write(MCP23008_REG_ADDR_IODIR);
-	i2c_write(0x00);
-	i2c_stop();
+
+	
 	
 	while(1)
 	{
@@ -107,15 +112,15 @@ int main()
 		// while(ADCSRA & (1 << ADSC)); // Conversion complete
 
 		if (adcVal > 128) {
-			PORTB |= (1 << PB3); // Set PB3 as output
-			i2c_start(ADDRS, 0);
-			i2c_write(MCP23008_REG_ADDR_GPIO);
-			i2c_write(counter);
-			i2c_stop();
+			PORTB |= (1 << PB3); // Set PB3 high
+			
+			OLED_fillscreen(0x00);
 		}
 		else{
-			PORTB &= ~(1 << PB3);
+			PORTB &= ~(1 << PB3);	// Set PB3 low
+			OLED_fillscreen(0xFF);
 		}
+		_delay_ms(50);
 	}
 	return 0;
 }

@@ -5,25 +5,25 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         00000074  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  00000282  2**0
+  1 .data         00000000  00800060  00800060  0000026e  2**0
                   ALLOC, LOAD, DATA
-  2 .bss          00000002  00800060  00800060  00000282  2**0
+  2 .bss          00000002  00800060  00800060  0000026e  2**0
                   ALLOC
-  3 .comment      0000002f  00000000  00000000  00000282  2**0
+  3 .comment      0000002f  00000000  00000000  0000026e  2**0
                   CONTENTS, READONLY
-  4 .stack.descriptors.hdr 0000000e  00000000  00000000  000002b1  2**0
+  4 .stack.descriptors.hdr 0000000e  00000000  00000000  0000029d  2**0
                   CONTENTS, READONLY
-  5 .debug_info   00000420  00000000  00000000  000002bf  2**0
+  5 .debug_info   00000420  00000000  00000000  000002ab  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000003e8  00000000  00000000  000006df  2**0
+  6 .debug_abbrev 000003e8  00000000  00000000  000006cb  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000000f5  00000000  00000000  00000ac7  2**0
+  7 .debug_line   000000f5  00000000  00000000  00000ab3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_str    00000169  00000000  00000000  00000bbc  2**0
+  8 .debug_str    00000169  00000000  00000000  00000ba8  2**0
                   CONTENTS, READONLY, DEBUGGING
   9 .text         00000002  00000074  00000074  00000108  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 10 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000d28  2**2
+ 10 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000d14  2**2
                   CONTENTS, READONLY, DEBUGGING
  11 .text.i2c_transfer 00000032  00000076  00000076  0000010a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
@@ -37,21 +37,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
  16 .text.__vector_8 00000024  0000013e  0000013e  000001d2  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 17 .text.startup.main 00000076  00000162  00000162  000001f6  2**1
+ 17 .text.startup.main 00000062  00000162  00000162  000001f6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 18 .bss.adcVal   00000001  00800062  00800062  00000282  2**0
+ 18 .bss.adcVal   00000001  00800062  00800062  0000026e  2**0
                   ALLOC
- 19 .bss.counter  00000001  00800063  00800063  00000282  2**0
+ 19 .bss.counter  00000001  00800063  00800063  0000026e  2**0
                   ALLOC
- 20 .text.__dummy_fini 00000002  000001d8  000001d8  0000026c  2**1
+ 20 .text.__dummy_fini 00000002  000001c4  000001c4  00000258  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.__dummy_funcs_on_exit 00000002  000001da  000001da  0000026e  2**1
+ 21 .text.__dummy_funcs_on_exit 00000002  000001c6  000001c6  0000025a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .text.__dummy_simulator_exit 00000002  000001dc  000001dc  00000270  2**1
+ 22 .text.__dummy_simulator_exit 00000002  000001c8  000001c8  0000025c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 23 .text.exit    0000000e  000001de  000001de  00000272  2**1
+ 23 .text.exit    0000000e  000001ca  000001ca  0000025e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 24 .text._Exit   00000002  000001ec  000001ec  00000280  2**1
+ 24 .text._Exit   00000002  000001d8  000001d8  0000026c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
@@ -120,7 +120,7 @@ Disassembly of section .text:
   68:	f4 07       	cpc	r31, r20
   6a:	31 f7       	brne	.-52     	; 0x38 <__do_copy_data+0x8>
   6c:	7a d0       	rcall	.+244    	; 0x162 <main>
-  6e:	b7 c0       	rjmp	.+366    	; 0x1de <exit>
+  6e:	ad c0       	rjmp	.+346    	; 0x1ca <exit>
 
 00000070 <_exit>:
   70:	f8 94       	cli
@@ -313,50 +313,41 @@ Disassembly of section .text.startup.main:
  1ac:	ba df       	rcall	.-140    	; 0x122 <i2c_stop>
  1ae:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <_end>
  1b2:	81 38       	cpi	r24, 0x81	; 129
- 1b4:	28 f4       	brcc	.+10     	; 0x1c0 <main+0x5e>
- 1b6:	c3 98       	cbi	0x18, 3	; 24
+ 1b4:	28 f0       	brcs	.+10     	; 0x1c0 <main+0x5e>
+ 1b6:	c3 9a       	sbi	0x18, 3	; 24
  1b8:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <_end>
  1bc:	81 38       	cpi	r24, 0x81	; 129
- 1be:	d8 f3       	brcs	.-10     	; 0x1b6 <main+0x54>
- 1c0:	c3 9a       	sbi	0x18, 3	; 24
- 1c2:	60 e0       	ldi	r22, 0x00	; 0
- 1c4:	70 e0       	ldi	r23, 0x00	; 0
- 1c6:	80 e2       	ldi	r24, 0x20	; 32
- 1c8:	84 df       	rcall	.-248    	; 0xd2 <i2c_start>
- 1ca:	89 e0       	ldi	r24, 0x09	; 9
- 1cc:	78 df       	rcall	.-272    	; 0xbe <i2c_write>
- 1ce:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
- 1d2:	75 df       	rcall	.-278    	; 0xbe <i2c_write>
- 1d4:	a6 df       	rcall	.-180    	; 0x122 <i2c_stop>
- 1d6:	eb cf       	rjmp	.-42     	; 0x1ae <main+0x4c>
+ 1be:	d8 f7       	brcc	.-10     	; 0x1b6 <main+0x54>
+ 1c0:	c3 98       	cbi	0x18, 3	; 24
+ 1c2:	f5 cf       	rjmp	.-22     	; 0x1ae <main+0x4c>
 
 Disassembly of section .text.__dummy_fini:
 
-000001d8 <_fini>:
- 1d8:	08 95       	ret
+000001c4 <_fini>:
+ 1c4:	08 95       	ret
 
 Disassembly of section .text.__dummy_funcs_on_exit:
 
-000001da <__funcs_on_exit>:
- 1da:	08 95       	ret
+000001c6 <__funcs_on_exit>:
+ 1c6:	08 95       	ret
 
 Disassembly of section .text.__dummy_simulator_exit:
 
-000001dc <__simulator_exit>:
- 1dc:	08 95       	ret
+000001c8 <__simulator_exit>:
+ 1c8:	08 95       	ret
 
 Disassembly of section .text.exit:
 
-000001de <exit>:
- 1de:	ec 01       	movw	r28, r24
- 1e0:	fc df       	rcall	.-8      	; 0x1da <__funcs_on_exit>
- 1e2:	fa df       	rcall	.-12     	; 0x1d8 <_fini>
- 1e4:	ce 01       	movw	r24, r28
- 1e6:	fa df       	rcall	.-12     	; 0x1dc <__simulator_exit>
- 1e8:	ce 01       	movw	r24, r28
- 1ea:	00 d0       	rcall	.+0      	; 0x1ec <_Exit>
+000001ca <exit>:
+ 1ca:	ec 01       	movw	r28, r24
+ 1cc:	fc df       	rcall	.-8      	; 0x1c6 <__funcs_on_exit>
+ 1ce:	fa df       	rcall	.-12     	; 0x1c4 <_fini>
+ 1d0:	ce 01       	movw	r24, r28
+ 1d2:	fa df       	rcall	.-12     	; 0x1c8 <__simulator_exit>
+ 1d4:	ce 01       	movw	r24, r28
+ 1d6:	00 d0       	rcall	.+0      	; 0x1d8 <_Exit>
 
 Disassembly of section .text._Exit:
 
-000001ec <_Exit>:
- 1ec:	41 df       	rcall	.-382    	; 0x70 <_exit>
+000001d8 <_Exit>:
+ 1d8:	4b df       	rcall	.-362    	; 0x70 <_exit>

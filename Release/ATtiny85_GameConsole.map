@@ -40,6 +40,24 @@ Discarded input sections
                 0x0000000000000000       0x10 main.o
  .text.adc1_init
                 0x0000000000000000       0x22 main.o
+ .text          0x0000000000000000        0x0 OLED.o
+ .data          0x0000000000000000        0x0 OLED.o
+ .bss           0x0000000000000000        0x0 OLED.o
+ .text.OLED_send_byte
+                0x0000000000000000        0x2 OLED.o
+ .text.OLED_send_command
+                0x0000000000000000       0x18 OLED.o
+ .text.OLED_init
+                0x0000000000000000       0x70 OLED.o
+ .text.OLED_send_data_start
+                0x0000000000000000        0xc OLED.o
+ .text.OLED_send_data_stop
+                0x0000000000000000        0x2 OLED.o
+ .text.OLED_setpos
+                0x0000000000000000       0x3c OLED.o
+ .text.OLED_fillscreen
+                0x0000000000000000       0x3e OLED.o
+ .comment       0x0000000000000000       0x30 OLED.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr25/memx-const\libgcc.a(_copy_data.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr25/memx-const\libgcc.a(_copy_data.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr25/memx-const\libgcc.a(_copy_data.o)
@@ -98,6 +116,7 @@ Linker script and memory map
 LOAD D:/Programs/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avr25/memx-const/crtattiny85.o
 LOAD i2c.o
 LOAD main.o
+LOAD OLED.o
 START GROUP
 LOAD c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libm.a
 END GROUP
@@ -498,36 +517,36 @@ LOAD data_init
                 0x000000000000013e                __vector_8
 
 .text.startup.main
-                0x0000000000000162       0x76
+                0x0000000000000162       0x62
  .text.startup.main
-                0x0000000000000162       0x76 main.o
+                0x0000000000000162       0x62 main.o
                 0x0000000000000162                main
 
 .text.__dummy_fini
-                0x00000000000001d8        0x2
+                0x00000000000001c4        0x2
  .text.__dummy_fini
-                0x00000000000001d8        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(exit.o)
-                0x00000000000001d8                _fini
+                0x00000000000001c4        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(exit.o)
+                0x00000000000001c4                _fini
 
 .text.__dummy_funcs_on_exit
-                0x00000000000001da        0x2
+                0x00000000000001c6        0x2
  .text.__dummy_funcs_on_exit
-                0x00000000000001da        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(exit.o)
-                0x00000000000001da                __funcs_on_exit
+                0x00000000000001c6        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(exit.o)
+                0x00000000000001c6                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x00000000000001dc        0x2
+                0x00000000000001c8        0x2
  .text.__dummy_simulator_exit
-                0x00000000000001dc        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(exit.o)
-                0x00000000000001dc                __simulator_exit
+                0x00000000000001c8        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(exit.o)
+                0x00000000000001c8                __simulator_exit
 
-.text.exit      0x00000000000001de        0xe
- .text.exit     0x00000000000001de        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(exit.o)
-                0x00000000000001de                exit
+.text.exit      0x00000000000001ca        0xe
+ .text.exit     0x00000000000001ca        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(exit.o)
+                0x00000000000001ca                exit
 
-.text._Exit     0x00000000000001ec        0x2
- .text._Exit    0x00000000000001ec        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(_Exit.o)
-                0x00000000000001ec                _Exit
+.text._Exit     0x00000000000001d8        0x2
+ .text._Exit    0x00000000000001d8        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/memx-const\libc.a(_Exit.o)
+                0x00000000000001d8                _Exit
 
 .bss.adcVal     0x0000000000800062        0x1
  .bss.adcVal    0x0000000000800062        0x1 main.o

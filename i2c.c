@@ -12,9 +12,7 @@
 #endif
 
 
-#include <xc.h>
 #include "i2c.h"
-//#include <stdbool.h>
 #include <util/delay.h>
 
 /* *********************************************************************************************************************
@@ -25,7 +23,7 @@
 
 
 // Defines
-#define TWI_FAST_MODE
+//#define TWI_FAST_MODE
 
 #ifdef TWI_FAST_MODE                 // TWI FAST mode timing limits. SCL = 100-400kHz
 #define DELAY_T2TWI (_delay_us(2))   // >1.3us
